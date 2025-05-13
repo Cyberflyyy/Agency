@@ -50,7 +50,6 @@ const Card = ({
         className="w-full h-[500px] rounded-[25px] p-6 sm:p-[50px] flex flex-col origin-top relative"
       >
         <div className="flex flex-col md:flex-row w-full h-full gap-6">
-          {/* Image container - responsive width */}
           <div className="relative w-full md:w-[60%] h-[60%] md:h-full rounded-[25px] overflow-hidden">
             <motion.div style={{ scale: imageScale }} className="w-full h-full">
               <Image
@@ -62,7 +61,6 @@ const Card = ({
             </motion.div>
           </div>
 
-          {/* Text content */}
           <div className="flex flex-col justify-start md:justify-center w-full md:w-[40%] h-[40%] md:h-full">
             <h2 className="text-xl sm:text-2xl font-bold mb-2">{title}</h2>
             <p className="text-sm sm:text-base opacity-80">{description}</p>
