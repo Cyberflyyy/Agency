@@ -8,6 +8,7 @@ import AboutUs from "./components/about_us";
 import Reneame1 from "./components/reneame1";
 import Rename2 from "./components/rename2";
 import Header from "./components/header";
+import NonStackingCards from "./components/non_stacking_cards";
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
@@ -27,7 +28,8 @@ export default function Home() {
         <Main />
 
         <LeftSection />
-        <StackingCards />
+
+        {windowWidth < 640 ? <NonStackingCards /> : <StackingCards />}
         <RightSection />
 
         <AboutUs />
