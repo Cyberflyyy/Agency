@@ -26,10 +26,10 @@ const Main = () => {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl mb-6 font-medium">
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400">
-                Nowoczesny wygląd.
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r leading-normal from-white to-blue-400">
+                Nowoczesny design.
               </span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r leading-normal from-blue-400 to-white">
                 Realne rezultaty.
               </span>
             </h1>
