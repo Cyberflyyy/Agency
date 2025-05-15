@@ -27,10 +27,10 @@ const Main = () => {
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl mb-6 font-medium">
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-400">
-                Great design.
+                Nowoczesny wygląd.
               </span>
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white">
-                Greater results.
+                Realne rezultaty.
               </span>
             </h1>
 
@@ -45,8 +45,8 @@ const Main = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="mb-8 max-w-lg mx-auto text-sm sm:text-base text-white/70"
             >
-              I design & build websites that look great, launch quickly and
-              drive sales for your business.
+              Projektuję i tworzę strony internetowe, które przyciągają uwagę,
+              działają błyskawicznie i realnie wspierają rozwój Twojego biznesu.
             </motion.p>
 
             <div className="flex justify-center space-x-4">
@@ -57,7 +57,7 @@ const Main = () => {
                 }}
                 className="group flex items-center gap-2 py-2 border border-white/15 sm:py-3 px-4 sm:px-6 text-xs sm:text-sm tracking-wide transition-all"
               >
-                SEE PROJECTS
+                ZOBACZ PROJEKTY
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </motion.button>
               <motion.button
@@ -67,7 +67,7 @@ const Main = () => {
                 }}
                 className="group flex items-center gap-2 border border-white/15 py-2 sm:py-3 px-4 sm:px-6 text-xs sm:text-sm tracking-wide transition-all"
               >
-                TESTIMONIALS
+                KONTAKT
                 <ExternalLink className="w-4 h-4 group-hover:translate-y-[-2px] transition-transform" />
               </motion.button>
             </div>
