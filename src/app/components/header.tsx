@@ -91,7 +91,7 @@ const Header = () => {
                   href="#"
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity "
                 >
-                  <div className="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent  p-1 rounded-xs">
+                  <div className=" bg-gradient-to-r from-[#BCC6CC] text-black to-[#EAEAEA] p-1 rounded-xs">
                     PROJEKTY
                   </div>
                 </Link>
@@ -101,7 +101,7 @@ const Header = () => {
                   href="#"
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity"
                 >
-                  <div className="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent p-1 rounded-xs">
+                  <div className=" bg-gradient-to-r from-[#BCC6CC] text-black to-[#EAEAEA]  p-1 rounded-xs">
                     USŁUGI
                   </div>
                 </Link>
@@ -111,7 +111,7 @@ const Header = () => {
                   href="#"
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity"
                 >
-                  <div className=" bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent p-1 rounded-xs">
+                  <div className=" bg-gradient-to-r from-[#BCC6CC] text-black to-[#EAEAEA]  p-1 rounded-xs">
                     O NAS
                   </div>
                 </Link>
@@ -121,7 +121,7 @@ const Header = () => {
                   href="#"
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity"
                 >
-                  <div className="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent p-1 rounded-xs">
+                  <div className=" bg-gradient-to-r from-[#BCC6CC] text-black to-[#EAEAEA] p-1 rounded-xs">
                     KONTAKT
                   </div>
                 </Link>
