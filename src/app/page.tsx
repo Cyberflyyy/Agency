@@ -9,6 +9,7 @@ import Reneame1 from "./components/reneame1";
 import Rename2 from "./components/rename2";
 import Header from "./components/header";
 import NonStackingCards from "./components/non_stacking_cards";
+import BottomBackdropText from "./components/footer";
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
@@ -26,18 +27,19 @@ export default function Home() {
       <div className="grid grid-cols-[minmax(1px,0.5fr)_minmax(300px,6fr)_minmax(1px,0.5fr)] sm:grid-cols-[minmax(20px,0.7fr)_minmax(400px,5fr)_minmax(20px,0.7fr)] md:grid-cols-[minmax(30px,1fr)_minmax(500px,3fr)_minmax(30px,1fr)] lg:grid-cols-[1fr_3fr_1fr]">
         <Header />
         <Main />
-        <AboutUs />
         <LeftSection />
 
         {windowWidth < 640 ? <NonStackingCards /> : <StackingCards />}
         <RightSection />
 
-        
+        <AboutUs />
 
         <Reneame1 />
 
         <Rename2 />
       </div>
+
+      <BottomBackdropText />
 
       {windowWidth > 0 && (
         <div className="fixed bottom-2.5 right-2.5 bg-black/90 p-2 rounded text-xs z-50">

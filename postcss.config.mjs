@@ -6,6 +6,9 @@ const config = {
           colors: {
             custom: "#222222", // Tu dodajesz własny kolor
           },
+          fontFamily: {
+            orbitron: ["Orbitron", "sans-serif"],
+          },
         },
       },
     },

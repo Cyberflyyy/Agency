@@ -6,7 +6,7 @@ const Rename2 = () => {
   return (
     <>
       <LeftSection />
-      <div className="border-l border-r border-white/15 min-h-[500px] flex flex-col items-center justify-center p-4 sm:p-8">
+      <div className="border-l border-r border-b border-white/15 min-h-[500px] flex flex-col items-center justify-center p-4 sm:p-8">
         <div className="w-full h-full flex items-center justify-center">
           <p className="text-white/50 text-sm sm:text-base">
             Sekcja 4 - Dodaj tutaj swoją treść
