@@ -1,1 +1,15 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @import "tailwindcss";
+
+/* Opcjonalnie: Ustaw Orbitron jako domyślny font dla całej aplikacji */
+/* body {
+  font-family: var(--font-orbitron), sans-serif;
+} */
+
+/* Lub dodaj własne klasy pomocnicze */
+@theme inline {
+  --font-orbitron: "Orbitron", sans-serif;
+}
+/* ...existing code... */

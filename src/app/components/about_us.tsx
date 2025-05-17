@@ -11,13 +11,13 @@ const AboutUs = () => {
           <h1 className="text-4xl font-bold  text-center bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
             Zajmujemy się wszystkim co potrzebne do napisania strony którą potrzebujesz.
             <br />
-            <span className="text-3xl">Oszczędzająć twoj czas i zmartwienia.</span>
+            <span className="text-3xl  font-orbitron   ">Oszczędzająć twoj czas i zmartwienia.</span>
           </h1>
         </div>
         <div className="w-full h-full flex flex-col md:flex-row gap-8">
-          <div className="w-full md:w-1/2 h-full space-y-14">
+          <div className="w-full  md:w-1/2 h-full space-y-14">
             <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300">
-              <h2 className="text-xl font-medium text-white mb-3">
+              <h2 className="text-xl  font-medium text-white mb-3">
                 Od pomysłu po wdrożenie – kompleksowo prowadzimy każdy etap projektu, dbając o płynność i bezproblemowy
                 przebieg prac, abyś Ty mógł skupić się na rozwoju swojego biznesu.
               </h2>

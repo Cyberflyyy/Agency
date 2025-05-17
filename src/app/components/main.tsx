@@ -26,7 +26,7 @@ const Main = () => {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl mb-6 font-medium">
-              <span className="block text-transparent font-bold bg-clip-text bg-gradient-to-r pb-3  from-white to-blue-400">
+              <span  className="block text-transparent font-bold bg-clip-text bg-gradient-to-r pb-3  from-white to-blue-400">
                 Nowoczesny design.
               </span>
               <span className="block text-transparent font-bold  bg-clip-text bg-gradient-to-r pb-3  from-blue-400 to-white">
