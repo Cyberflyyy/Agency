@@ -27,7 +27,7 @@ const Header = () => {
                 href="#"
                 className="block px-4 text-sm rounded-sm   py-2 hover:bg-white/10"
               >
-                REQUEST A QUOTE
+                KONTAKT
               </Link>
             </div>
 
@@ -66,19 +66,19 @@ const Header = () => {
                   href="#"
                   className="block px-4 py-2 text-sm hover:bg-white/10"
                 >
-                  WORK
+                  REALIZACJE
                 </Link>
                 <Link
                   href="#"
                   className="block px-4 text-sm py-2 hover:bg-white/10"
                 >
-                  SERVICES
+                  USŁUGI
                 </Link>
                 <Link
                   href="#"
                   className="block px-4 text-sm py-2 hover:bg-white/10"
                 >
-                  TESTIMONIALS
+                  O NAS
                 </Link>
               </div>
             )}
@@ -91,8 +91,8 @@ const Header = () => {
                   href="#"
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity "
                 >
-                  <div className=" bg-gradient-to-r from-[#BCC6CC] text-black to-[#EAEAEA] p-1 rounded-xs">
-                    PROJEKTY
+                  <div className="px-5 py-1.5 text-white text-sm border border-[#8cb3e0]/30 rounded-xs hover:bg-[#8cb3e0]/10 transition-all duration-300">
+                    REALIZACJE
                   </div>
                 </Link>
               </li>
@@ -101,7 +101,7 @@ const Header = () => {
                   href="#"
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity"
                 >
-                  <div className=" bg-gradient-to-r from-[#BCC6CC] text-black to-[#EAEAEA]  p-1 rounded-xs">
+                  <div className="px-5 py-1.5 text-white text-sm border border-[#8cb3e0]/30 rounded-xs hover:bg-[#8cb3e0]/10 transition-all duration-300">
                     USŁUGI
                   </div>
                 </Link>
@@ -111,7 +111,7 @@ const Header = () => {
                   href="#"
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity"
                 >
-                  <div className=" bg-gradient-to-r from-[#BCC6CC] text-black to-[#EAEAEA]  p-1 rounded-xs">
+                  <div className="px-5 py-1.5 text-white text-sm border border-[#8cb3e0]/30 rounded-xs hover:bg-[#8cb3e0]/10 transition-all duration-300">
                     O NAS
                   </div>
                 </Link>
@@ -121,7 +121,7 @@ const Header = () => {
                   href="#"
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity"
                 >
-                  <div className=" bg-gradient-to-r from-[#BCC6CC] text-black to-[#EAEAEA] p-1 rounded-xs">
+                  <div className="px-5 py-1.5 text-white text-sm border border-[#8cb3e0]/30 rounded-xs hover:bg-[#8cb3e0]/10 transition-all duration-300">
                     KONTAKT
                   </div>
                 </Link>

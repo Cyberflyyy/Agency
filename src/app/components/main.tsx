@@ -26,10 +26,10 @@ const Main = () => {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl mb-6 font-medium">
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r pb-3  from-white to-blue-400">
+              <span className="block text-transparent font-bold bg-clip-text bg-gradient-to-r pb-3  from-white to-blue-400">
                 Nowoczesny design.
               </span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r pb-3  from-blue-400 to-white">
+              <span className="block text-transparent font-bold  bg-clip-text bg-gradient-to-r pb-3  from-blue-400 to-white">
                 Realne rezultaty.
               </span>
             </h1>
@@ -45,7 +45,7 @@ const Main = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="mb-8 max-w-lg mx-auto text-sm sm:text-base text-white/70"
             >
-              Projektuję i tworzę strony internetowe, które przyciągają uwagę,
+              Projektujęmy i tworzymy strony internetowe, które przyciągają uwagę,
               działają błyskawicznie i realnie wspierają rozwój Twojego biznesu.
             </motion.p>
 
