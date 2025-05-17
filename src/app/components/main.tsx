@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <>
       <div className="border-b border-r border-white/15 min-h-[450px] md:min-h-[750px]"></div>
-      <div className="border-b border-r pb-24 border-white/15 min-h-[490px] md:min-h-[750px] relative overflow-hidden flex items-center justify-center">
+      <div className="border-b border-r pb-24 border-white/15 min-h-[490px] pt-10 md:pt-0 md:min-h-[750px] relative overflow-hidden flex items-center justify-center">
         <div
           className="absolute inset-0 opacity-30"
           style={{
@@ -26,7 +26,7 @@ const Main = () => {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl mb-6 font-medium">
-              <span  className="block text-transparent font-bold bg-clip-text bg-gradient-to-r pb-3  from-white to-blue-400">
+              <span className="block text-transparent font-bold bg-clip-text bg-gradient-to-r pb-3  from-white to-blue-400">
                 Nowoczesny design.
               </span>
               <span className="block text-transparent font-bold  bg-clip-text bg-gradient-to-r pb-3  from-blue-400 to-white">
@@ -45,8 +45,9 @@ const Main = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="mb-8 max-w-lg mx-auto text-sm sm:text-base text-white/70"
             >
-              Projektujęmy i tworzymy strony internetowe, które przyciągają uwagę,
-              działają błyskawicznie i realnie wspierają rozwój Twojego biznesu.
+              Projektujęmy i tworzymy strony internetowe, które przyciągają
+              uwagę, działają błyskawicznie i realnie wspierają rozwój Twojego
+              biznesu.
             </motion.p>
 
             <div className="flex justify-center space-x-4">

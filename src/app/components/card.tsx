@@ -41,17 +41,17 @@ const Card = ({
   return (
     <div
       ref={container}
-      className="h-screen flex items-center w-full justify-center sticky top-0"
+      className="h-screen flex      items-center w-full justify-center sticky top-0"
     >
       <motion.div
         style={{
           scale,
           top: `calc(-10% + ${i * 25}px)`,
         }}
-        className="w-full h-[500px] rounded-xl bg-[#1a1a1a] border border-white/10 p-6 sm:p-[40px] flex flex-col origin-top relative shadow-lg"
+        className="w-full h-[500px]  rounded-xl bg-[#1a1a1a] border border-white/10 p-6 sm:p-[40px] flex flex-col origin-top relative shadow-lg"
       >
-        <div className="flex flex-col md:flex-row w-full h-full gap-6">
-          <div className="relative w-full md:w-[60%] h-[60%] md:h-full rounded-xl overflow-hidden">
+        <div className="flex  flex-col   xl:flex-row w-full h-full gap-6">
+          <div className=" relative w-full xl:w-[60%] h-[60%] xl:h-full rounded-xl overflow-hidden">
             <motion.div style={{ scale: imageScale }} className="w-full h-full">
               <Image
                 src={src || "/placeholder.svg"}
@@ -62,7 +62,7 @@ const Card = ({
             </motion.div>
           </div>
 
-          <div className="flex flex-col justify-start md:justify-between w-full md:w-[40%] h-[40%] md:h-full">
+          <div className="flex flex-col justify-start xl:justify-between w-full xl:w-[40%] h-[40%] xl:h-full">
             <div>
               <h2
                 className={cn(
