@@ -32,7 +32,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} antialiased relative`}
       >
-        <SmoothScroll />
         {children}
         <div
           className="fixed bottom-0 left-0 w-full h-[10vh] pointer-events-none z-50 
