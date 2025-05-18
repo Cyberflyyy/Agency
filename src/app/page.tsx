@@ -5,8 +5,7 @@ import RightSection from "./components/right_section";
 import StackingCards from "./components/stacking_cards";
 import Main from "./components/main";
 import AboutUs from "./components/about_us";
-import Reneame1 from "./components/reneame1";
-import FAQSection from "./components/rename2";
+
 import Header from "./components/header";
 import NonStackingCards from "./components/non_stacking_cards";
 import BottomBackdropText from "./components/footer";
