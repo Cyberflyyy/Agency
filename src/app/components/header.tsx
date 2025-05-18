@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Layers, Briefcase, Users, Phone } from "lucide-react";
+import { Menu, X, Layers, Briefcase, Users, Mail } from "lucide-react";
 import { cn } from "../lib/utils";
 
 const Header = () => {
@@ -41,18 +41,18 @@ const Header = () => {
   return (
     <>
       <div className="border-b border-r border-white/15 h-16 flex items-center justify-center"></div>
-      <div className="border-b border-l border-r border-white/15 h-16 flex items-center justify-center relative">
+      <div className="border-b border-l border-r border-white/15 h-16 flex items-center justify-center  ">
         {windowWidth < 640 ? (
           <div className="flex justify-between items-center w-full px-4">
             <div className="flex items-center">
               <Link
                 href="#"
                 className={cn(
-                  "block px-5 text-sm rounded-full py-1.5 border border-blue-500/50 bg-blue-500/10 text-blue-400 font-medium hover:bg-blue-500/20 transition-all duration-300"
+                  "block px-5 text-sm rounded-md py-1.5 border border-blue-500/50 bg-blue-500/10 text-blue-400 font-medium hover:bg-blue-500/20 transition-all duration-300"
                 )}
               >
                 <div className="flex items-center gap-2">
-                  <Phone size={16} />
+                  <Mail size={16} />
                   KONTAKT
                 </div>
               </Link>
@@ -60,7 +60,7 @@ const Header = () => {
 
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="p-2 hover:bg-white/10 rounded-full transition-all duration-300 active:scale-95 border border-white/10"
+              className="p-2 hover:bg-white/10 rounded-md transition-all duration-300 active:scale-95 border border-white/10"
               aria-label={menuOpen ? "Zamknij menu" : "Otwórz menu"}
             >
               <AnimatePresence mode="wait">
@@ -150,11 +150,11 @@ const Header = () => {
 
                       <div className="mt-auto p-6 border-t border-white/10">
                         <Link
-                          href="#"
+                          href="/app/kontakt"
                           className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/20"
                           onClick={() => setMenuOpen(false)}
                         >
-                          <Phone size={16} />
+                          <Mail size={16} />
                           <span className="font-medium">KONTAKT</span>
                         </Link>
                       </div>
@@ -169,30 +169,31 @@ const Header = () => {
             <ul className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8">
               <li>
                 <Link
-                  href="#"
+                  href="#realizacje"
+                  scroll={true}
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity "
                 >
-                  <div className="px-5 py-1.5 text-white text-sm border border-[#8cb3e0]/30 rounded-xs hover:bg-[#8cb3e0]/10 transition-all duration-300">
+                  <div className="px-5 py-1.5 text-sm  text-white bg-white/15 rounded-lg hover:bg-[#8cb3e0]/10 transition-all duration-300">
                     REALIZACJE
                   </div>
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#FAQ"
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity"
                 >
-                  <div className="px-5 py-1.5 text-white text-sm border border-[#8cb3e0]/30 rounded-xs hover:bg-[#8cb3e0]/10 transition-all duration-300">
-                    USŁUGI
+                  <div className="px-6 py-1.5 text-white bg-white/15  text-sm  rounded-lg hover:bg-[#8cb3e0]/10 transition-all duration-300">
+                    FAQ
                   </div>
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#ONAS"
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity"
                 >
-                  <div className="px-5 py-1.5 text-white text-sm border border-[#8cb3e0]/30 rounded-xs hover:bg-[#8cb3e0]/10 transition-all duration-300">
+                  <div className="px-5 py-1.5 text-white bg-white/15 text-sm   rounded-lg hover:bg-[#8cb3e0]/10 transition-all duration-300">
                     O NAS
                   </div>
                 </Link>
@@ -200,11 +201,11 @@ const Header = () => {
               <li>
                 <Link
                   href="#"
-                  className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity"
+                  className="flex items-center justify-center gap-2 w-full py-1.5  px-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/20"
+                  onClick={() => setMenuOpen(false)}
                 >
-                  <div className="px-5 py-1.5 text-white text-sm border border-[#8cb3e0]/30 rounded-xs hover:bg-[#8cb3e0]/10 transition-all duration-300">
-                    KONTAKT
-                  </div>
+                  <Mail size={16} />
+                  <span className="font-medium">KONTAKT</span>
                 </Link>
               </li>
             </ul>

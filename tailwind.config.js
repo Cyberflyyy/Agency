@@ -5,14 +5,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        orbitron: ["Orbitron", "sans-serif"],
-      },
-      colors: {
-        custom: "#222222",
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };

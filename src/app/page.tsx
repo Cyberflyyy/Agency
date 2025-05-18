@@ -6,7 +6,7 @@ import StackingCards from "./components/stacking_cards";
 import Main from "./components/main";
 import AboutUs from "./components/about_us";
 import Reneame1 from "./components/reneame1";
-import Rename2 from "./components/rename2";
+import FAQSection from "./components/rename2";
 import Header from "./components/header";
 import NonStackingCards from "./components/non_stacking_cards";
 import BottomBackdropText from "./components/footer";
@@ -23,8 +23,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen  bg-[#000000] text-white ">
-      <div className="grid grid-cols-[minmax(1px,0.5fr)_minmax(300px,6fr)_minmax(1px,0.5fr)] sm:grid-cols-[minmax(20px,0.7fr)_minmax(400px,5fr)_minmax(20px,0.7fr)] md:grid-cols-[minmax(30px,1fr)_minmax(500px,3fr)_minmax(30px,1fr)] lg:grid-cols-[1fr_3fr_1fr]">
+    <div className="w-full min-h-screen  bg-[#000000]  text-white ">
+      <div className="grid grid-cols-[minmax(1px,0.5fr)_minmax(300px,6fr)_minmax(1px,0.5fr)] sm:grid-cols-[minmax(20px,0.7fr)_minmax(400px,5fr)_minmax(20px,0.7fr)] md:grid-cols-[minmax(30px,1fr)_minmax(500px,3fr)_minmax(30px,1fr)] lg:grid-cols-[1fr_5fr_1fr]">
         <Header />
         <Main />
         <LeftSection />
@@ -34,9 +34,7 @@ export default function Home() {
 
         <AboutUs />
 
-        <Reneame1 />
-
-        <Rename2 />
+        <FAQSection />
       </div>
 
       <BottomBackdropText />
