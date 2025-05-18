@@ -6,10 +6,7 @@ const AboutUs = () => {
   return (
     <>
       <LeftSection />
-      <div
-        id="ONAS"
-        className="border-b border-t border-l border-r border-white/15 min-h-[500px] flex flex-col items-center justify-center p-4 sm:p-6 xl:p-8"
-      >
+      <div className="border-b border-t border-l border-r border-white/15 min-h-[500px] flex flex-col items-center justify-center p-4 sm:p-6 xl:p-8">
         {/* Heading section - improved styling */}
         <div className="w-full flex flex-col items-center justify-center mb-6 sm:mb-8 xl:mb-12">
           <span className="text-2xl sm:text-3xl xl:text-4xl font-medium  mb-2 sm:mb-4">
@@ -26,90 +23,124 @@ const AboutUs = () => {
           </h1>
         </div>
 
-        {/* Main content - keeping desktop layout, improving mobile */}
-        <div className="w-full h-full flex flex-col xl:flex-row gap-4 sm:gap-6 xl:gap-8">
-          {/* Left column */}
-          <div className="w-full xl:w-1/2 h-full space-y-4 sm:space-y-8 xl:space-y-14">
-            <div className="bg-white/5 p-3 sm:p-4 xl:p-6 rounded-xl backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300">
-              <h2 className="text-base sm:text-xl xl:text-xl font-medium text-white">
-                Od pomysłu po wdrożenie – kompleksowo prowadzimy każdy etap
-                projektu, dbając o płynność i bezproblemowy przebieg prac, abyś
-                Ty mógł skupić się na rozwoju swojego biznesu.
-              </h2>
+        {/* Squares and wide rectangle below */}
+        <div className="w-full grid grid-cols-2 gap-2 sm:gap-3 xl:gap-4">
+          {/* Top-left square */}
+          <div className="bg-white backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300 rounded-tl-2xl flex flex-col overflow-hidden">
+            <div className="px-8 pt-8 sm:px-10 sm:pt-10">
+              <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
+                Wydajność
+              </p>
+              <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                Zapewniamy najwyższą wydajność, by Twoi użytkownicy zawsze
+                cieszyli się płynną pracą strony internetowej.
+              </p>
             </div>
-            <div className="bg-white/5 p-3 sm:p-4 xl:p-6 rounded-xl backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
-              <h2 className="text-base sm:text-xl xl:text-xl font-medium text-white">
-                Jesteśmy doświadczonymi programistami, którym możesz powierzyć
-                realizację nawet najbardziej wymagających pomysłów – sprawnie,
-                profesjonalnie i bez zbędnych komplikacji.
-              </h2>
+            <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
+              <img
+                className="w-full max-lg:max-w-xs"
+                src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-performance.png"
+                alt="Performance illustration"
+              />
             </div>
           </div>
 
-          {/* Right column */}
-          <div className="w-full xl:w-1/2 h-full mt-4 xl:mt-0">
-            <div className="bg-white/5 p-3 sm:p-4 xl:p-6 rounded-xl backdrop-blur-sm border border-white/10 h-full">
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 xl:mb-6">
-                Nasz Tech Stack
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 xl:gap-4">
+          {/* Top-right card with code preview */}
+          <div className="bg-white backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300 rounded-tr-2xl overflow-hidden flex flex-col">
+            <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+              <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
+                Kod i Jakość
+              </p>
+              <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                Tworzymy czysty i skalowalny kod – każdy projekt dopasowujemy
+                ściśle do potrzeb Twojego biznesu.
+              </p>
+            </div>
+            <div className="relative min-h-[15rem] w-full grow">
+              <div className="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
+                <div className="flex bg-gray-800/40 ring-1 ring-white/5">
+                  <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
+                    <div className="border-r border-b border-r-white/10 border-b-white/20 bg-white/5 px-4 py-2 text-white">
+                      NotificationSetting.jsx
+                    </div>
+                    <div className="border-r border-gray-600/10 px-4 py-2">
+                      App.jsx
+                    </div>
+                  </div>
+                </div>
+                <pre className="language-jsx text-sm text-gray-100 p-4 overflow-auto h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-b-xl">
+                  {`function NotifyButton() {
+ return (
+    <button
+      className="px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white"
+      >
+        Enable Notifications
+         </button>
+       )
+     }
+
+  export default NotifyButton;`}
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom-wide rectangle spanning two columns */}
+          <div className="col-span-2">
+            <div className=" bg-white backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300 p-3 sm:p-4 xl:p-6 w-full flex flex-col rounded-bl-2xl rounded-br-2xl">
+              <div className="ml-2">
+                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
+                  Nasz Tech Stack
+                </p>
+                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center mb-6">
+                  Oferujemy pełne wsparcie i nowoczesne rozwiązania, które
+                  pomogą Ci osiągnąć sukces szybciej i efektywniej.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-0.5 flex-1 rounded-2xl overflow-hidden ">
                 {[
                   {
-                    icon: (
-                      <Rocket className="h-6 w-6 sm:h-7 sm:w-7 xl:h-8 xl:w-8 text-purple-400" />
-                    ),
+                    icon: <Rocket className="h-8 w-8 text-purple-400" />,
                     name: "Next.js",
                     desc: "Framework React dla nowoczesnych aplikacji",
                   },
                   {
-                    icon: (
-                      <Layout className="h-6 w-6 sm:h-7 sm:w-7 xl:h-8 xl:w-8 text-cyan-400" />
-                    ),
+                    icon: <Layout className="h-8 w-8 text-cyan-400" />,
                     name: "Tailwind CSS",
                     desc: "Utility-first CSS dla szybkiego projektowania",
                   },
                   {
-                    icon: (
-                      <Database className="h-6 w-6 sm:h-7 sm:w-7 xl:h-8 xl:w-8 text-emerald-400" />
-                    ),
+                    icon: <Database className="h-8 w-8 text-emerald-400" />,
                     name: "Prisma",
                     desc: "Zaawansowana baza danych relacyjna",
                   },
                   {
-                    icon: (
-                      <Server className="h-6 w-6 sm:h-7 sm:w-7 xl:h-8 xl:w-8 text-amber-400" />
-                    ),
+                    icon: <Server className="h-8 w-8 text-amber-400" />,
                     name: "Node.js",
                     desc: "Środowisko uruchomieniowe JavaScript",
                   },
                   {
-                    icon: (
-                      <Code className="h-6 w-6 sm:h-7 sm:w-7 xl:h-8 xl:w-8 text-rose-400" />
-                    ),
+                    icon: <Code className="h-8 w-8 text-rose-400" />,
                     name: "TypeScript",
                     desc: "Typowany JavaScript dla lepszej jakości kodu",
                   },
                   {
-                    icon: (
-                      <Zap className="h-6 w-6 sm:h-7 sm:w-7 xl:h-8 xl:w-8 text-blue-400" />
-                    ),
+                    icon: <Zap className="h-8 w-8 text-blue-400" />,
                     name: "Vercel",
                     desc: "Platforma do wdrażania aplikacji webowych",
                   },
                 ].map((tech, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-2  sm:gap-3 bg-black/20 p-2 sm:p-3 rounded-xl hover:bg-black/40 transition-all duration-300"
+                    className="flex flex-col items-center text-center gap-1 bg-gradient-to-br from-gray-800 to-gray-900 p-3  hover:from-gray-700 hover:to-gray-800 transition-all duration-300"
                   >
                     {tech.icon}
-                    <div>
-                      <h4 className="font-medium text-white text-sm sm:text-base">
-                        {tech.name}
-                      </h4>
-                      <p className="text-white/70 text-xs sm:text-sm">
-                        {tech.desc}
-                      </p>
-                    </div>
+                    <h4 className="font-medium text-white text-sm sm:text-base">
+                      {tech.name}
+                    </h4>
+                    <p className="text-white/70 text-xs sm:text-sm">
+                      {tech.desc}
+                    </p>
                   </div>
                 ))}
               </div>

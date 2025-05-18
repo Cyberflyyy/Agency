@@ -1,18 +1,24 @@
 'use client';
 import React from "react";
+import LeftSection from "./left_section";
+import RightSection from "./right_section";
 
 const BottomBackdropText = () => {
   return (
-    <div className="relative  left-0 w-full h-[120px] overflow-hidden z-0 pointer-events-none mt-[30px]">
-      <div className="flex items-center justify-center w-full h-full">
+    <>
+      <LeftSection />
+      
+      <div className="border-l border-r border-b border-white/15 overflow-hidden flex items-start justify-center pt-4">
         <h1
-          className=" text-[9vw] font-orbitron  text-[#444444] select-none"
+          className="text-white/30 font-orbitron leading-none text-[clamp(2.5rem,9vw,8.5rem)] tracking-tight uppercase text-center w-full translate-y-[10%]"
         >
-          HUMBLE STUDIOS
+          GRATEFUL
         </h1>
       </div>
-    </div>
-  );
+
+      <RightSection />
+    </>
+  );  
 };
 
 export default BottomBackdropText;
