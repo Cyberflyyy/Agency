@@ -41,14 +41,14 @@ const Header = () => {
   return (
     <>
       <div className="border-b border-r border-white/15 h-16 flex items-center justify-center"></div>
-      <div className="border-b border-l border-r border-white/15 h-16 flex items-center justify-center  ">
+      <div className="  h-16 flex items-center justify-center sticky top-0 z-50   ">
         {windowWidth < 640 ? (
-          <div className="flex justify-between items-center w-full px-4">
+          <div className="flex justify-center items-center w-full px-4 ">
             <div className="flex items-center">
               <Link
-                href="#"
+                href="/kontakt"
                 className={cn(
-                  "block px-5 text-sm rounded-md py-1.5 border border-blue-500/50 bg-blue-500/10 text-blue-400 font-medium hover:bg-blue-500/20 transition-all duration-300"
+                  "block px-5 text-sm rounded-md py-1.5 border border-blue-500/50 bg-black text-blue-400 font-medium  transition-all hover:scale-105   active:scale-95 duration-300"
                 )}
               >
                 <div className="flex items-center gap-2">
@@ -60,7 +60,7 @@ const Header = () => {
 
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="p-2 hover:bg-white/10 rounded-md transition-all duration-300 active:scale-95 border border-white/10"
+              className="p-2  rounded-md transition-all duration-300 hover:cursor-pointer bg-black hover:scale-105    active:scale-95 border border-white/20"
               aria-label={menuOpen ? "Zamknij menu" : "Otwórz menu"}
             >
               <AnimatePresence mode="wait">
@@ -72,7 +72,7 @@ const Header = () => {
                     exit={{ opacity: 0, rotate: 90 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <X className="text-white" size={20} />
+                    <X className="text-white" size={18} />
                   </motion.div>
                 ) : (
                   <motion.div
@@ -82,7 +82,7 @@ const Header = () => {
                     exit={{ opacity: 0, rotate: -90 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <Menu className="text-white" size={20} />
+                    <Menu className="text-white" size={18} />
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -106,7 +106,11 @@ const Header = () => {
                     initial={{ x: "100%" }}
                     animate={{ x: 0 }}
                     exit={{ x: "100%" }}
-                    transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                    transition={{
+                      type: "spring",
+                      damping: 25,
+                      stiffness: 300,
+                    }}
                     className="fixed right-0 top-0 h-full w-3/4 max-w-xs bg-gradient-to-b from-gray-900 to-black border-l border-white/15 z-50 overflow-y-auto"
                   >
                     <div className="flex flex-col h-full">
@@ -150,7 +154,7 @@ const Header = () => {
 
                       <div className="mt-auto p-6 border-t border-white/10">
                         <Link
-                          href="/app/kontakt"
+                          href="/kontakt"
                           className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/20"
                           onClick={() => setMenuOpen(false)}
                         >
@@ -165,15 +169,15 @@ const Header = () => {
             </AnimatePresence>
           </div>
         ) : (
-          <nav>
-            <ul className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8">
+          <nav className="sticky top-0 z-50">
+            <ul className="flex flex-wrap items-center justify-center gap-[2px]">
               <li>
                 <Link
                   href="#realizacje"
                   scroll={true}
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity "
                 >
-                  <div className="px-5 py-1.5 text-sm  text-white bg-white/15 rounded-lg hover:bg-[#8cb3e0]/10 transition-all duration-300">
+                  <div className="px-5 py-1.5 text-sm  text-white border border-white/15 bg-black hover:scale-105    active:scale-95 rounded-lg hover:bg-[#8cb3e0]/10 transition-all duration-300">
                     REALIZACJE
                   </div>
                 </Link>
@@ -183,7 +187,7 @@ const Header = () => {
                   href="#FAQ"
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity"
                 >
-                  <div className="px-6 py-1.5 text-white bg-white/15  text-sm  rounded-lg hover:bg-[#8cb3e0]/10 transition-all duration-300">
+                  <div className="px-6 py-1.5 text-white border border-white/15 bg-black hover:scale-105    active:scale-95   text-sm  rounded-lg hover:bg-[#8cb3e0]/10 transition-all duration-300">
                     FAQ
                   </div>
                 </Link>
@@ -193,15 +197,15 @@ const Header = () => {
                   href="#ONAS"
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity"
                 >
-                  <div className="px-5 py-1.5 text-white bg-white/15 text-sm   rounded-lg hover:bg-[#8cb3e0]/10 transition-all duration-300">
+                  <div className="px-5 py-1.5 text-white border border-white/15 bg-black text-sm hover:scale-105    active:scale-95   rounded-lg hover:bg-[#8cb3e0]/10 transition-all duration-300">
                     O NAS
                   </div>
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="flex items-center justify-center gap-2 w-full py-1.5  px-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/20"
+                  href="/kontakt"
+                  className="flex items-center justify-center gap-2 w-full py-1.5  px-4 bg-gradient-to-r hover:scale-105    active:scale-95 from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/20"
                   onClick={() => setMenuOpen(false)}
                 >
                   <Mail size={16} />
@@ -212,6 +216,7 @@ const Header = () => {
           </nav>
         )}
       </div>
+
       <div className="border-b border-l border-white/15 h-16"></div>
     </>
   );

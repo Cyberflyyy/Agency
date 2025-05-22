@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <>
       <div className="border-b border-r border-white/15 min-h-[450px] md:min-h-[750px]"></div>
-      <div className="border-b border-r pb-24 border-white/15 min-h-[490px] pt-10 md:pt-0 md:min-h-[750px] relative overflow-hidden flex items-center justify-center">
+      <div className="border-b border-r border-t pb-24 border-white/15 min-h-[490px] pt-10 md:pt-0 md:min-h-[750px] relative overflow-hidden flex items-center justify-center">
         <div
           className="absolute inset-0 opacity-30"
           style={{

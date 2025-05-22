@@ -1,3 +1,4 @@
+import Image from "next/image";
 import LeftSection from "./left_section";
 import RightSection from "./right_section";
 import { Code, Database, Layout, Rocket, Server, Zap } from "lucide-react";
@@ -24,9 +25,9 @@ const AboutUs = () => {
         </div>
 
         {/* Squares and wide rectangle below */}
-        <div className="w-full grid grid-cols-2 gap-2 sm:gap-3 xl:gap-4">
+        <div className="w-full flex  flex-col xl:grid xl:grid-cols-2 gap-2 sm:gap-3 xl:gap-4">
           {/* Top-left square */}
-          <div className="bg-white backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300 rounded-tl-2xl flex flex-col overflow-hidden">
+          <div className="bg-white backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300 rounded-2xl xl:rounded-tl-2xl flex flex-col overflow-hidden">
             <div className="px-8 pt-8 sm:px-10 sm:pt-10">
               <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
                 Wydajność
@@ -37,16 +38,20 @@ const AboutUs = () => {
               </p>
             </div>
             <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
-              <img
+              <Image
                 className="w-full max-lg:max-w-xs"
                 src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-performance.png"
                 alt="Performance illustration"
+                width={400}
+                height={250}
+                style={{ width: "100%", height: "auto" }}
+                unoptimized
               />
             </div>
           </div>
 
           {/* Top-right card with code preview */}
-          <div className="bg-white backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300 rounded-tr-2xl overflow-hidden flex flex-col">
+          <div className="bg-white backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300 rounded-2xl xl:rounded-tr-2xl overflow-hidden flex flex-col">
             <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
               <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
                 Kod i Jakość
@@ -68,9 +73,12 @@ const AboutUs = () => {
                     </div>
                   </div>
                 </div>
-                <pre className="language-jsx text-sm text-gray-100 p-4 overflow-auto h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-b-xl">
+                <pre
+                  className="language-jsx text-sm text-gray-100 p-4  h-full bg-gradient-to-br from-gray-800 to-gray-900 rounded-b-xl overflow-hidden
+                "
+                >
                   {`function NotifyButton() {
- return (
+  return (
     <button
       className="px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white"
       >
@@ -86,8 +94,9 @@ const AboutUs = () => {
           </div>
 
           {/* Bottom-wide rectangle spanning two columns */}
+
           <div className="col-span-2">
-            <div className=" bg-white backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300 p-3 sm:p-4 xl:p-6 w-full flex flex-col rounded-bl-2xl rounded-br-2xl">
+            <div className=" bg-white backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300 p-3 sm:p-4 xl:p-6 w-full flex flex-col rounded-2xl xl:rounded-bl-2xl xl:rounded-br-2xl">
               <div className="ml-2">
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
                   Nasz Tech Stack

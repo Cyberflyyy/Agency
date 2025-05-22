@@ -92,7 +92,7 @@ const Card = ({
                     : "bg-white/30"
                 )}
               ></div>
-
+              <p></p>
               <button className="text-xs uppercase tracking-wider text-white/60 hover:text-white transition-colors flex items-center">
                 View Project
                 <svg

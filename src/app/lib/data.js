@@ -5,6 +5,7 @@ export const projects = [
       "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
     src: "/corpcomment.png",
     color: "blue",
+    tech: "Next.js, Tailwind CSS, Framer Motion",
   },
   {
     title: "Clément Chapillon",
