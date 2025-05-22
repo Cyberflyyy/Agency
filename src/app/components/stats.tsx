@@ -18,17 +18,6 @@ const Stats = () => {
           className="mx-auto max-w-7xl grid gap-8"
           style={{ gridTemplateRows: "auto 1fr" }}
         >
-          {/* Nagłówek zajmujący całą górę /}
-          <div className="row-start-1 text-center">
-            <h2 className="font-manrope text-4xl font-bold text-white mb-4">
-              Nasze statystyki
-            </h2>
-            <p className="text-sm text-white leading-6">
-              Budujemy strony, które przyciągają klientów i rozwijają Twój biznes
-            </p>
-          </div>
-
-          {/ Grid ze statystykami: 3 kolumny na większych ekranach */}
           <div className="row-start-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
             {stats.map((stat, idx) => (
               <div
