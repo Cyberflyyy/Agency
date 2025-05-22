@@ -9,9 +9,9 @@ import AboutUs from "./components/about_us";
 import Header from "./components/header";
 import NonStackingCards from "./components/non_stacking_cards";
 import BottomBackdropText from "./components/footer";
-import FAQPage from "./components/rename2";
+
 import Reneame1 from "./components/reneame1";
-import StickyHeader from "./components/sticky_header";
+
 import Stats from "./components/stats";
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0);
