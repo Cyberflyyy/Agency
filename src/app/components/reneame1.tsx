@@ -1,4 +1,6 @@
 import React from "react";
+import LeftSection from "./left_section";
+import RightSection from "./right_section";
 interface FAQ {
   id: number;
   question: string;
@@ -59,47 +61,54 @@ const Rename1 = () => {
   ];
 
   return (
-    <section className="border-b border-white/15 min-h-[1000px]  flex flex-col items-center justify-center ">
-      <h2 className="text-3xl  md:text-4xl xl:text-5xl mt-8 font-bold mb-8 text-center">
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-          Często zadawane pytania
-        </span>
-      </h2>
+    <div
+      className="
+    grid grid-cols-[minmax(1px,0.5fr)_minmax(300px,6fr)_minmax(1px,0.5fr)] sm:grid-cols-[minmax(20px,0.7fr)_minmax(400px,5fr)_minmax(20px,0.7fr)] md:grid-cols-[minmax(30px,1fr)_minmax(500px,3fr)_minmax(30px,1fr)] lg:grid-cols-[1fr_5fr_1fr] xl:flex xl:flex-col"
+    >
+      <LeftSection></LeftSection>
+      <section className="border-b border-white/15 min-h-[1000px]  flex flex-col items-center justify-center ">
+        <h2 className="text-3xl  md:text-4xl xl:text-5xl mt-8 font-bold mb-8 text-center">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+            Często zadawane pytania
+          </span>
+        </h2>
 
-      <div className=" flex flex-col xl:flex-row   flex-1  w-full  ">
-        <div className="flex-1 flex flex-col   ">
-          {localFAQs.slice(0, 3).map((item) => (
-            <article
-              key={item.id}
-              className={` flex flex-col p-4 xl:pr-8  items-start xl:pl-28 justify-center  border-b border-t border-r flex-1 border-white/15 `}
-            >
-              <h3 className="text-xl xl:text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-200">
-                {item.question}
-              </h3>
-              <p className="text-gray-300 whitespace-pre-wrap pt-2">
-                {item.answer}
-              </p>
-            </article>
-          ))}
-        </div>
-        <div className=" flex-1  flex flex-col  ">
-          {localFAQs.slice(3, 6).map((item) => (
-            <article
-              key={item.id}
-              className={` flex flex-col p-4   xl:pr-8 items-start xl:pl-28 justify-center flex-1 border-t border-b border-white/15  `}
-            >
-              <h3 className="text-xl xl:text-2xl  font-semibold text-white group-hover:text-blue-400 transition-colors duration-200">
-                {item.question}
-              </h3>
+        <div className=" flex flex-col xl:flex-row   flex-1  w-full  ">
+          <div className="flex-1 flex flex-col   ">
+            {localFAQs.slice(0, 3).map((item) => (
+              <article
+                key={item.id}
+                className={` flex flex-col p-4 xl:pr-8  items-start xl:pl-28 justify-center  border-b border-t border-r flex-1 border-white/15 `}
+              >
+                <h3 className="text-xl xl:text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-200">
+                  {item.question}
+                </h3>
+                <p className="text-gray-300 whitespace-pre-wrap pt-2">
+                  {item.answer}
+                </p>
+              </article>
+            ))}
+          </div>
+          <div className=" flex-1  flex flex-col  ">
+            {localFAQs.slice(3, 6).map((item) => (
+              <article
+                key={item.id}
+                className={` flex flex-col p-4   xl:pr-8 items-start xl:pl-28 justify-center flex-1 border-t border-b border-white/15  `}
+              >
+                <h3 className="text-xl xl:text-2xl  font-semibold text-white group-hover:text-blue-400 transition-colors duration-200">
+                  {item.question}
+                </h3>
 
-              <p className="text-gray-300 whitespace-pre-wrap pt-2">
-                {item.answer}
-              </p>
-            </article>
-          ))}
+                <p className="text-gray-300 whitespace-pre-wrap pt-2">
+                  {item.answer}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <RightSection></RightSection>
+    </div>
   );
 };
 
