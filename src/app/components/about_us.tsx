@@ -20,9 +20,12 @@ const AboutUs = () => {
           {/* Top-left square */}
           <div className="bg-[#1a1a1a] backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300 rounded-2xl xl:rounded-tl-2xl flex flex-col overflow-hidden">
             <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-              <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Wydajność</p>
-              <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-              Zapewniamy najwyższą wydajność, by Twoi użytkownicy zawsze cieszyli się płynną pracą strony internetowej.
+              <p className="mt-2 text-2xl  font-semibold  tracking-tight  text-[#5148e4] max-lg:text-center">
+                Wydajność
+              </p>
+              <p className="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center">
+                Zapewniamy najwyższą wydajność, by Twoi użytkownicy zawsze
+                cieszyli się płynną pracą strony internetowej.
               </p>
             </div>
             <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
@@ -38,16 +41,17 @@ const AboutUs = () => {
             </div>
           </div>
 
-         {/* Top-right card with code preview */}
-         <div className="bg-white backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300 rounded-tr-2xl overflow-hidden flex flex-col">
-         <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-            <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-              Kod i Jakość
-            </p>
-            <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-              Tworzymy czysty i skalowalny kod – każdy projekt dopasowujemy ściśle do potrzeb Twojego biznesu.
-            </p>
-          </div>
+          {/* Top-right card with code preview */}
+          <div className="bg-[#1a1a1a] backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300 rounded-2xl xl:rounded-tr-2xl overflow-hidden flex flex-col">
+            <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+              <p className="mt-2 text-2xl font-semibold  tracking-tight  text-[#5148e4]  max-lg:text-center">
+                Kod i Jakość
+              </p>
+              <p className="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center">
+                Tworzymy czysty i skalowalny kod – każdy projekt dopasowujemy
+                ściśle do potrzeb Twojego biznesu.
+              </p>
+            </div>
             <div className="relative min-h-[15rem] w-full grow">
               <div className="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
                 <div className="flex bg-gray-800/40 ring-1 ring-white/5">
@@ -85,9 +89,12 @@ const AboutUs = () => {
           <div className="col-span-2">
             <div className=" bg-[#1a1a1a] backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300 p-3 sm:p-4 xl:p-6 w-full flex flex-col rounded-2xl xl:rounded-bl-2xl xl:rounded-br-2xl">
               <div className="ml-2">
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Nasz Tech Stack</p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center mb-6">
-                Oferujemy pełne wsparcie i nowoczesne rozwiązania, które pomogą Ci osiągnąć sukces szybciej i efektywniej.
+                <p className="mt-2 font-semibold text-2xl tracking-tight  text-[#5148e4]  max-lg:text-center">
+                  Nasz Tech Stack
+                </p>
+                <p className="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center mb-6">
+                  Oferujemy pełne wsparcie i nowoczesne rozwiązania, które
+                  pomogą Ci osiągnąć sukces szybciej i efektywniej.
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-0.5 flex-1 rounded-2xl overflow-hidden ">
