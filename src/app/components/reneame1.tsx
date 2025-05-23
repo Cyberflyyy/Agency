@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import LeftSection from "./left_section";
 import RightSection from "./right_section";
 interface FAQ {
@@ -9,6 +10,16 @@ interface FAQ {
   category: string;
 }
 const Rename1 = () => {
+  const [windowWidth, setWindowWidth] = useState(0);
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   const localFAQs: FAQ[] = [
     {
       id: 1,
@@ -61,54 +72,101 @@ const Rename1 = () => {
   ];
 
   return (
-    <div
-      className="col-span-3
-    "
-    >
-      <LeftSection></LeftSection>
-      <section className="border-b border-white/15 min-h-[1000px]  flex flex-col items-center justify-center ">
-        <h2 className="text-3xl  md:text-4xl xl:text-5xl mt-8 font-bold mb-8 text-center">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-            Często zadawane pytania
-          </span>
-        </h2>
+    <>
+      {windowWidth < 900 ? (
+        <>
+          <LeftSection></LeftSection>
+          <section className="coll-span-3 border-b border-white/15 min-h-[1000px]  flex flex-col items-center justify-center ">
+            <h2 className="text-3xl  md:text-4xl xl:text-5xl mt-8 font-bold mb-8 text-center">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Często zadawane pytania
+              </span>
+            </h2>
 
-        <div className=" flex flex-col xl:flex-row   flex-1  w-full  ">
-          <div className="flex-1 flex flex-col   ">
-            {localFAQs.slice(0, 3).map((item) => (
-              <article
-                key={item.id}
-                className={` flex flex-col p-4 xl:pr-8  items-start xl:pl-28 justify-center  border-b border-t border-r flex-1 border-white/15 `}
-              >
-                <h3 className="text-xl xl:text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-200">
-                  {item.question}
-                </h3>
-                <p className="text-gray-300 whitespace-pre-wrap pt-2">
-                  {item.answer}
-                </p>
-              </article>
-            ))}
-          </div>
-          <div className=" flex-1  flex flex-col  ">
-            {localFAQs.slice(3, 6).map((item) => (
-              <article
-                key={item.id}
-                className={` flex flex-col p-4   xl:pr-8 items-start xl:pl-28 justify-center flex-1 border-t border-b border-white/15  `}
-              >
-                <h3 className="text-xl xl:text-2xl  font-semibold text-white group-hover:text-blue-400 transition-colors duration-200">
-                  {item.question}
-                </h3>
+            <div className=" flex flex-col xl:flex-row   flex-1  w-full  ">
+              <div className="flex-1 flex flex-col   ">
+                {localFAQs.slice(0, 3).map((item) => (
+                  <article
+                    key={item.id}
+                    className={` flex flex-col p-4 xl:pr-8  items-start xl:pl-28 justify-center  border-b border-t border-r flex-1 border-white/15 `}
+                  >
+                    <h3 className="text-xl xl:text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-200">
+                      {item.question}
+                    </h3>
+                    <p className="text-gray-300 whitespace-pre-wrap pt-2">
+                      {item.answer}
+                    </p>
+                  </article>
+                ))}
+              </div>
+              <div className=" flex-1  flex flex-col  ">
+                {localFAQs.slice(3, 6).map((item) => (
+                  <article
+                    key={item.id}
+                    className={` flex flex-col p-4   xl:pr-8 items-start xl:pl-28 justify-center flex-1 border-t border-b border-white/15  `}
+                  >
+                    <h3 className="text-xl xl:text-2xl  font-semibold text-white group-hover:text-blue-400 transition-colors duration-200">
+                      {item.question}
+                    </h3>
 
-                <p className="text-gray-300 whitespace-pre-wrap pt-2">
-                  {item.answer}
-                </p>
-              </article>
-            ))}
-          </div>
+                    <p className="text-gray-300 whitespace-pre-wrap pt-2">
+                      {item.answer}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+          <RightSection></RightSection>
+        </>
+      ) : (
+        <div className="col-span-3">
+          <LeftSection></LeftSection>
+          <section className="coll-span-3 border-b border-white/15 min-h-[1000px]  flex flex-col items-center justify-center ">
+            <h2 className="text-3xl  md:text-4xl xl:text-5xl mt-8 font-bold mb-8 text-center">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Często zadawane pytania
+              </span>
+            </h2>
+
+            <div className=" flex flex-col xl:flex-row   flex-1  w-full  ">
+              <div className="flex-1 flex flex-col   ">
+                {localFAQs.slice(0, 3).map((item) => (
+                  <article
+                    key={item.id}
+                    className={` flex flex-col p-4 xl:pr-8  items-start xl:pl-28 justify-center  border-b border-t border-r flex-1 border-white/15 `}
+                  >
+                    <h3 className="text-xl xl:text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-200">
+                      {item.question}
+                    </h3>
+                    <p className="text-gray-300 whitespace-pre-wrap pt-2">
+                      {item.answer}
+                    </p>
+                  </article>
+                ))}
+              </div>
+              <div className=" flex-1  flex flex-col  ">
+                {localFAQs.slice(3, 6).map((item) => (
+                  <article
+                    key={item.id}
+                    className={` flex flex-col p-4   xl:pr-8 items-start xl:pl-28 justify-center flex-1 border-t border-b border-white/15  `}
+                  >
+                    <h3 className="text-xl xl:text-2xl  font-semibold text-white group-hover:text-blue-400 transition-colors duration-200">
+                      {item.question}
+                    </h3>
+
+                    <p className="text-gray-300 whitespace-pre-wrap pt-2">
+                      {item.answer}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+          <RightSection></RightSection>
         </div>
-      </section>
-      <RightSection></RightSection>
-    </div>
+      )}
+    </>
   );
 };
 
