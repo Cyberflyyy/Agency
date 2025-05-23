@@ -62,8 +62,8 @@ const Rename1 = () => {
 
   return (
     <div
-      className="
-    grid grid-cols-[minmax(1px,0.5fr)_minmax(300px,6fr)_minmax(1px,0.5fr)] sm:grid-cols-[minmax(20px,0.7fr)_minmax(400px,5fr)_minmax(20px,0.7fr)] md:grid-cols-[minmax(30px,1fr)_minmax(500px,3fr)_minmax(30px,1fr)] lg:grid-cols-[1fr_5fr_1fr] xl:flex xl:flex-col"
+      className="col-span-3
+    "
     >
       <LeftSection></LeftSection>
       <section className="border-b border-white/15 min-h-[1000px]  flex flex-col items-center justify-center ">
