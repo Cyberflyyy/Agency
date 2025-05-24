@@ -21,10 +21,6 @@ const Button: React.FC<ButtonProps> = ({ highlightStyle }) => {
 
       <div className="border border-white/15 overflow-hidden flex flex-col items-center justify-center py-20 md:py-28 relative">
         {/* tło */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -left-10 top-1/4 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl" />
-          <div className="absolute -right-10 bottom-1/4 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl" />
-        </div>
 
         {/* treść */}
         <motion.div
@@ -49,7 +45,7 @@ const Button: React.FC<ButtonProps> = ({ highlightStyle }) => {
             <span className="block bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
               Zacznijmy razem
             </span>
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-400 to-blue-500 leading-tight mb-2 bg-clip-text text-transparent">
               Twój projekt już dziś
             </span>
           </h2>
