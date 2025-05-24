@@ -9,7 +9,7 @@ const AboutUs = () => {
       <LeftSection />
       <div
         id="ONAS"
-        className="border-b border-t border-l border-r border-white/15 min-h-[500px] flex flex-col items-center justify-center p-4 sm:p-6 xl:p-8"
+        className="border border-white/15 min-h-[500px] flex flex-col items-center justify-center px-8 sm:px-6 xl:px-8 py-[150px]"
       >
         {/* Heading section - improved styling */}
         <div className="w-full flex flex-col items-center justify-center mb-6 sm:mb-8 xl:mb-12">
@@ -31,9 +31,9 @@ const AboutUs = () => {
                 cieszyli się płynną pracą strony internetowej.
               </p>
             </div>
-            <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
+            <div className="flex flex-1 items-center justify-center px-8 pt-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
               <Image
-                className="w-full max-lg:max-w-xs"
+                className="w-full max-w-[330px]"
                 src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-performance.png"
                 alt="Performance illustration"
                 width={400}
