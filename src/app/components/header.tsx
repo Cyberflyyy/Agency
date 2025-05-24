@@ -41,7 +41,7 @@ const Header = () => {
   return (
     <>
       <div className="border-b border-r border-white/15 h-16 flex items-center justify-center"></div>
-      <div className="  h-16 flex items-center justify-center sticky top-0 z-50   ">
+      <div className="h-16  border-white/15 flex items-center justify-center sticky top-0 z-50   ">
         {windowWidth < 640 ? (
           <div className="flex justify-center items-center w-full px-4 ">
             <div className="flex items-center">
@@ -169,7 +169,7 @@ const Header = () => {
             </AnimatePresence>
           </div>
         ) : (
-          <nav className="sticky top-0 z-50">
+          <nav className="sticky top-0 z-50  ">
             <ul className="flex flex-wrap items-center justify-center gap-[2px]">
               <li>
                 <Link

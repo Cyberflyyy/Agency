@@ -17,10 +17,6 @@ const Button = () => {
       <LeftSection />
       <div className="border border-white/15 overflow-hidden flex flex-col items-center justify-center py-20 md:py-28 relative">
         {/* Background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -left-10 top-1/4 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute -right-10 bottom-1/4 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl"></div>
-        </div>
 
         {/* Content */}
         <motion.div
@@ -43,7 +39,7 @@ const Button = () => {
             </span>
             <br />
             <span
-              className="bg-gradient-to-r from-blue-400 to-purple-400  
+              className="bg-gradient-to-r from-blue-400 to-blue-500  
              bg-clip-text text-transparent 
              "
             >
