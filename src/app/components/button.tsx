@@ -47,12 +47,6 @@ const Button = () => {
             </span>
           </h2>
 
-          <p className="text-white/60 mb-10 max-w-xl">
-            Masz pomysł na projekt? Chcesz stworzyć nowoczesną stronę
-            internetową? Skontaktuj się z nami, a my pomożemy Ci zrealizować
-            Twoje cele.
-          </p>
-
           <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
             <motion.button
               onClick={handleClick}
