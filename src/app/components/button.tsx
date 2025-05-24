@@ -1,28 +1,32 @@
+// components/Button.tsx
 "use client";
 import { useRouter } from "next/navigation";
-import RightSection from "./right_section";
 import LeftSection from "./left_section";
+import RightSection from "./right_section";
 import { motion } from "framer-motion";
 import { ArrowRight, Mail, MessageSquare } from "lucide-react";
+import React from "react";
 
-const Button = () => {
+type ButtonProps = {
+  highlightStyle: React.CSSProperties;
+};
+
+const Button: React.FC<ButtonProps> = ({ highlightStyle }) => {
   const router = useRouter();
-
-  const handleClick = () => {
-    router.push("/kontakt");
-  };
+  const handleClick = () => router.push("/kontakt");
 
   return (
     <>
       <LeftSection />
+
       <div className="border border-white/15 overflow-hidden flex flex-col items-center justify-center py-20 md:py-28 relative">
-        {/* Background elements */}
+        {/* tło */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -left-10 top-1/4 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute -right-10 bottom-1/4 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute -left-10 top-1/4 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl" />
+          <div className="absolute -right-10 bottom-1/4 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl" />
         </div>
 
-        {/* Content */}
+        {/* treść */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -37,12 +41,15 @@ const Button = () => {
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
+          {/* tutaj nakładamy podświetlanie */}
+          <h2
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+            style={highlightStyle}
+          >
+            <span className="block bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
               Zacznijmy razem
             </span>
-            <br />
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Twój projekt już dziś
             </span>
           </h2>
@@ -70,15 +77,15 @@ const Button = () => {
           </div>
         </motion.div>
 
-        {/* Decorative elements */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"></div>
-
+        {/* dekoracje */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-1.5">
           {[...Array(3)].map((_, i) => (
-            <div key={i} className="w-1.5 h-1.5 rounded-full bg-white/30"></div>
+            <div key={i} className="w-1.5 h-1.5 rounded-full bg-white/30" />
           ))}
         </div>
       </div>
+
       <RightSection />
     </>
   );

@@ -17,7 +17,7 @@ const Stats = () => {
 
       <section className="py-16 md:py-24 border-b border-white/15 relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 justify-items-center gap-8 min-[1441px]:grid-cols-3 min-[1441px]:justify-items-start">
             {stats.map((stat, idx) => {
               const numericValue = parseFloat(stat.value);
               const suffix = stat.value.replace(/[\d.]/g, "");
@@ -29,7 +29,7 @@ const Stats = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   viewport={{ once: true, amount: 0.3 }}
-                  className="flex items-center justify-start p-8 rounded-xl bg-black/30 backdrop-blur-sm duration-300"
+                  className="flex flex-col min-[1441px]:flex-row items-center justify-start p-8 rounded-xl bg-black/30 backdrop-blur-sm duration-300 w-full max-w-[400px]"
                 >
                   <CountUp
                     start={0}
@@ -48,7 +48,7 @@ const Stats = () => {
                     )}
                   </CountUp>
 
-                  <span className="ml-4 text-white/80 font-medium text-left">
+                  <span className="mt-4 min-[1441px]:mt-0 min-[1441px]:ml-4 text-white/80 font-medium text-center min-[1441px]:text-left">
                     {stat.label.split(" ").map((word, i) => (
                       <span key={i} className="block">
                         {word}

@@ -52,7 +52,7 @@ const Card = ({
     >
       <motion.div
         style={{ scale, top: `calc(-10% + ${i * 25}px)` }}
-        className="relative w-full h-[500px] bg-[#1a1a1a] border border-white/10 rounded-xl overflow-hidden p-6 shadow-lg"
+        className="relative w-full h-[500px] bg-[#1a1a1a] border border-white/10 rounded-xl overflow-hidden p-6 shadow-lg max-w-[1100px]"
       >
 
         <div className="relative z-10 w-[35%] h-full flex flex-col justify-between pr-6">
