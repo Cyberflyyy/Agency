@@ -78,9 +78,7 @@ const Rename1 = () => {
           <LeftSection></LeftSection>
           <section className="coll-span-3 border-b border-white/15 min-h-[1000px]  flex flex-col items-center justify-center ">
             <h2 className="text-3xl  md:text-4xl xl:text-5xl mt-8 font-bold mb-8 text-center">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Często zadawane pytania
-              </span>
+              <span className=" ">Często zadawane pytania</span>
             </h2>
 
             <div className=" flex flex-col xl:flex-row   flex-1  w-full  ">
@@ -123,10 +121,8 @@ const Rename1 = () => {
         <div className="col-span-3">
           <LeftSection></LeftSection>
           <section className="coll-span-3 border-b border-white/15 min-h-[1000px]  flex flex-col items-center justify-center ">
-            <h2 className="text-3xl  md:text-4xl xl:text-5xl mt-8 font-bold mb-8 text-center">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Często zadawane pytania
-              </span>
+            <h2 className="text-3xl  md:text-4xl xl:text-5xl mt-8 font-semibold mb-8 text-center">
+              <span className="">Często zadawane pytania</span>
             </h2>
 
             <div className=" flex flex-col xl:flex-row   flex-1  w-full  ">
@@ -136,7 +132,7 @@ const Rename1 = () => {
                     key={item.id}
                     className={` flex flex-col p-4 xl:pr-8  items-start xl:pl-28 justify-center  border-b border-t border-r flex-1 border-white/15 `}
                   >
-                    <h3 className="text-xl xl:text-2xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-200">
+                    <h3 className="text-xl xl:text-2xl font-semibold bg-gradient-to-r from-blue-400 to-blue-500  bg-clip-text text-transparent transition-colors duration-200">
                       {item.question}
                     </h3>
                     <p className="text-gray-300 whitespace-pre-wrap pt-2">
@@ -151,7 +147,7 @@ const Rename1 = () => {
                     key={item.id}
                     className={` flex flex-col p-4   xl:pr-8 items-start xl:pl-28 justify-center flex-1 border-t border-b border-white/15  `}
                   >
-                    <h3 className="text-xl xl:text-2xl  font-semibold text-white group-hover:text-blue-400 transition-colors duration-200">
+                    <h3 className="text-xl xl:text-2xl  font-semibold  bg-gradient-to-r from-blue-400 to-blue-500  bg-clip-text text-transparent  transition-colors duration-200">
                       {item.question}
                     </h3>
 

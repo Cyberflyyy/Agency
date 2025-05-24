@@ -45,7 +45,7 @@ const AboutUs = () => {
           </div>
 
           {/* Top-right card with code preview */}
-          <div className="bg-[#1a1a1a] backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300 rounded-2xl xl:rounded-tr-2xl overflow-hidden flex flex-col">
+          <div className="bg-[#1a1a1a] backdrop-blur-sm border border-white/10 hover:border-blue-500 transition-all duration-300 rounded-2xl xl:rounded-tr-2xl overflow-hidden flex flex-col">
             <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
               <p className="mt-2 text-2xl font-semibold  tracking-tight  text-[#5148e4]  max-lg:text-center">
                 Kod i Jakość

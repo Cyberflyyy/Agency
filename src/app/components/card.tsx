@@ -28,20 +28,16 @@ const Card = ({
   progress,
   i,
   src,
-  color,
 }: CardProps) => {
   const scale = useTransform(progress, range, [1, targetScale]);
   const container = useRef(null);
-
 
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start end", "start start"],
   });
 
-
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
-
 
   const offsetPx = useTransform(scrollYProgress, [0.5, 1], [-100, 0]);
 
@@ -52,19 +48,13 @@ const Card = ({
     >
       <motion.div
         style={{ scale, top: `calc(-10% + ${i * 25}px)` }}
-        className="relative w-full h-[500px] bg-[#1a1a1a] border border-white/10 rounded-xl overflow-hidden p-6 shadow-lg max-w-[1100px]"
+        className="relative w-[1100px] h-[500px] bg-[#1a1a1a] border border-white/10 rounded-xl overflow-hidden p-6 shadow-lg"
       >
-
         <div className="relative z-10 w-[35%] h-full flex flex-col justify-between pr-6">
           <div>
             <h2
               className={cn(
-                "text-xl sm:text-3xl font-medium mb-4",
-                color === "blue"
-                  ? "text-blue-400"
-                  : color === "purple"
-                  ? "text-purple-400"
-                  : "text-white"
+                "text-xl sm:text-3xl font-medium mb-4 bg-gradient-to-r from-blue-400 to-blue-500  bg-clip-text text-transparent"
               )}
             >
               {title}
@@ -74,16 +64,7 @@ const Card = ({
             </p>
           </div>
           <div className="mt-6 flex items-center">
-            <div
-              className={cn(
-                "h-1 w-24 rounded-full",
-                color === "blue"
-                  ? "bg-blue-500"
-                  : color === "purple"
-                  ? "bg-purple-500"
-                  : "bg-white/30"
-              )}
-            />
+            <div className={cn("h-1 w-24 rounded-full bg-blue-500")} />
             <button className="ml-4 text-xs uppercase tracking-wider text-white/60 hover:text-white transition-colors flex items-center">
               View Project
               <svg
@@ -105,7 +86,6 @@ const Card = ({
 
         <motion.div
           style={{
-
             bottom: offsetPx,
             right: offsetPx,
           }}

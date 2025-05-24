@@ -1,20 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Orbitron } from "next/font/google";
+
 import "./globals.css";
 // import SmoothScroll from "./components/smooth_scrol";
+import { Figtree } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const figtree = Figtree({
   subsets: ["latin"],
-});
-const orbitron = Orbitron({
-  subsets: ["latin"],
-  weight: ["400", "700", "900"],
-  variable: "--font-orbitron",
-});
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -29,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} antialiased relative`}
-      >
+      <body className={` ${figtree.className} antialiased relative`}>
         {/* <SmoothScroll /> */}
         {children}
         <div

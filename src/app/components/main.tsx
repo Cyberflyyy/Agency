@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <>
       <div className="border-b border-r border-white/15 min-h-[450px] md:min-h-[900px]"></div>
-      <div className="border-b border-r border-t pb-24 border-white/15 min-h-[490px] pt-10 md:pt-0 md:min-h-[750px] relative overflow-hidden flex items-center justify-center">
+      <div className="border-b -mt-[1px]  border-t pb-24 border-white/15 min-h-[490px] pt-10 md:pt-0 md:min-h-[750px] relative overflow-hidden flex items-center justify-center">
         <div
           className="absolute inset-0 opacity-30"
           style={{
@@ -43,7 +43,7 @@ const Main = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="mb-8 max-w-lg mx-auto text-sm sm:text-base text-white/70"
+              className="mb-8 max-w-lg mx-auto text-sm sm:text-base  text-white/70"
             >
               Projektujęmy i tworzymy strony internetowe, które przyciągają
               uwagę, działają błyskawicznie i realnie wspierają rozwój Twojego
