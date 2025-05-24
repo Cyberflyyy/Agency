@@ -28,7 +28,7 @@ const Button = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="relative z-10 flex flex-col items-center text-center px-4 max-w-3xl"
+          className="relative z-10 flex flex-col items-center  text-center px-4 max-w-3xl"
         >
           <div className="inline-flex items-center justify-center p-1.5 px-3 mb-6 rounded-full bg-blue-500/10 border border-blue-500/20">
             <Mail className="w-4 h-4 mr-2 text-blue-400" />
@@ -38,11 +38,15 @@ const Button = () => {
           </div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r   from-white to-white/70 bg-clip-text text-transparent">
               Zacznijmy razem
             </span>
             <br />
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span
+              className="bg-gradient-to-r from-blue-400 to-purple-400  
+             bg-clip-text text-transparent 
+             "
+            >
               Twój projekt już dziś
             </span>
           </h2>

@@ -309,7 +309,7 @@ const Page = () => {
                 Informacje kontaktowe
               </h3>
               <div className="space-y-4">
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 ">
                   <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Mail size={18} className="text-blue-400" />
                   </div>

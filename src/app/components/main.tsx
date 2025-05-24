@@ -43,7 +43,7 @@ const Main = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="mb-8 max-w-lg mx-auto text-sm sm:text-base text-white/70"
+              className="mb-8 max-w-lg mx-auto text-sm sm:text-base  text-white/70"
             >
               Projektujęmy i tworzymy strony internetowe, które przyciągają
               uwagę, działają błyskawicznie i realnie wspierają rozwój Twojego
