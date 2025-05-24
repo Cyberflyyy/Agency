@@ -28,7 +28,6 @@ const Card = ({
   progress,
   i,
   src,
-  color,
 }: CardProps) => {
   const scale = useTransform(progress, range, [1, targetScale]);
   const container = useRef(null);
