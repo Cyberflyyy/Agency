@@ -15,7 +15,7 @@ const StackingCards = () => {
     <div
       ref={container}
       id="realizacje"
-      className="border-b border-l  border-r border-white/15 min-h-[500px] flex flex-col items-center justify-center mt-8 p-4 sm:p-8 "
+      className="border-b border-l   border-r border-white/15 min-h-[500px] flex flex-col items-center justify-center mt-8 p-4 sm:p-8 "
     >
       <h2 className="text-5xl  font-bold text-white ">Nasze Realizacje</h2>
 
