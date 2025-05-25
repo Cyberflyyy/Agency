@@ -209,7 +209,7 @@ const Header = () => {
                 <Link
                   href="/kontakt"
                   scroll={true}
-                  className="flex items-center justify-center gap-2 w-full py-[4.5px]  px-4 bg-gradient-to-r hover:scale-105    active:scale-95 from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/20"
+                  className="flex items-center justify-center gap-2 w-full py-1.5  px-4 bg-gradient-to-r hover:scale-105    active:scale-95 from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/20"
                   onClick={() => setMenuOpen(false)}
                 >
                   <Mail size={16} />
