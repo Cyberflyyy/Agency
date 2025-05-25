@@ -8,8 +8,8 @@ const AboutUs = () => {
     <>
       <LeftSection />
       <div
-        id="ONAS"
-        className="border border-white/15 min-h-[500px] flex flex-col items-center justify-center px-8 sm:px-6 xl:px-8 py-[150px]"
+        id="onas"
+        className="border border-white/15 min-h-[500px] flex flex-col items-center justify-center  px-8 sm:px-6 xl:px-8 py-[150px]"
       >
         {/* Heading section - improved styling */}
         <div className="w-full flex flex-col items-center justify-center mb-6 sm:mb-8 xl:mb-12">
@@ -19,7 +19,7 @@ const AboutUs = () => {
           </h1>
         </div>
         {/* Squares and wide rectangle below */}
-        <div className="w-full flex  flex-col xl:grid xl:grid-cols-2 gap-2 sm:gap-3 xl:gap-4">
+        <div className="w-full flex  flex-col lg:grid xl:grid-cols-2 gap-4 sm:gap-3 xl:gap-4">
           {/* Top-left square */}
           <div className="bg-[#1a1a1a] backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-300 rounded-2xl xl:rounded-tl-2xl flex flex-col overflow-hidden">
             <div className="px-8 pt-8 sm:px-10 sm:pt-10">

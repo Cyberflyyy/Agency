@@ -5,10 +5,9 @@ type CardProps = {
   title: string;
   description: string;
   src: string;
-  color: string;
 };
 
-const NonStackingCard = ({ title, description, src, color }: CardProps) => {
+const NonStackingCard = ({ title, description, src }: CardProps) => {
   return (
     <div className="mb-6 overflow-hidden rounded-xl bg-[#1a1a1a] border border-white/10">
       <div className="relative h-48 w-full">
@@ -23,12 +22,7 @@ const NonStackingCard = ({ title, description, src, color }: CardProps) => {
       <div className="p-4">
         <h3
           className={cn(
-            "text-xl font-medium mb-2",
-            color === "blue"
-              ? "text-blue-400"
-              : color === "purple"
-              ? "text-purple-400"
-              : "text-white"
+            "text-xl font-medium mb-2 bg-gradient-to-r from-blue-400 to-blue-500  bg-clip-text text-transparent"
           )}
         >
           {title}
@@ -39,12 +33,7 @@ const NonStackingCard = ({ title, description, src, color }: CardProps) => {
         <div className="mt-4 flex justify-between items-center">
           <div
             className={cn(
-              "h-1 w-16 rounded-full",
-              color === "blue"
-                ? "bg-blue-500"
-                : color === "purple"
-                ? "bg-purple-500"
-                : "bg-white/30"
+              "h-1 w-16 rounded-full bg-gradient-to-r from-blue-400 to-blue-500   "
             )}
           ></div>
 

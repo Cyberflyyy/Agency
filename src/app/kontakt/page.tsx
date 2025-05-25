@@ -1,20 +1,32 @@
 "use client";
-
+import {
+  Listbox,
+  ListboxButton,
+  ListboxOption,
+  ListboxOptions,
+} from "@headlessui/react";
 import type React from "react";
 import { useState } from "react";
 
 import { motion } from "framer-motion";
-import {
-  Send,
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  ArrowRight,
-  CheckCircle,
-} from "lucide-react";
+import { Send, Mail, Phone, ArrowRight, CheckCircle } from "lucide-react";
 import HeaderKontakt from "../components/header_kontakt";
 import Link from "next/link";
+const price_options = [
+  { id: 1, name: "1 500 - 3 000 zł" },
+  { id: 2, name: "3 000 - 5 000 zł" },
+  { id: 3, name: "5 000 - 10 000 zł" },
+  { id: 4, name: "Powyżej 10 000 zł" },
+  { id: 5, name: " Wybierz przedział budżetowy" },
+];
+
+const project_options = [
+  { id: 1, name: "Strona internetowa" },
+  { id: 2, name: "Sklep internetowy" },
+  { id: 3, name: "Aplikacja webowa" },
+  { id: 4, name: "Redesign istniejącej strony" },
+  { id: 5, name: "Inny" },
+];
 
 const Page = () => {
   const [formState, setFormState] = useState({
@@ -23,13 +35,13 @@ const Page = () => {
     phone: "",
     subject: "",
     message: "",
-    projectType: "",
-    budget: "",
+    projectType: "Wybierz rodzaj projektu",
+    budget: "Wybierz przedział budżetowy",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
+  console.log("Form state:", formState);
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -60,8 +72,8 @@ const Page = () => {
         phone: "",
         subject: "",
         message: "",
-        projectType: "",
-        budget: "",
+        projectType: "Wybierz rodzaj projektu",
+        budget: "Wybierz przedział budżetowy",
       });
     }, 3000);
   };
@@ -77,10 +89,10 @@ const Page = () => {
           transition={{ duration: 0.5 }}
           className="text-center px-4"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent mb-4">
             Porozmawiajmy o Twoim projekcie
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
+          <p className="text-gray-400 max-w-2xl  mx-auto text-sm md:text-base">
             Wypełnij formularz poniżej, a nasz zespół skontaktuje się z Tobą w
             ciągu 24 godzin, aby omówić szczegóły Twojego projektu i
             zaproponować najlepsze rozwiązania.
@@ -182,32 +194,51 @@ const Page = () => {
                       >
                         Rodzaj projektu
                       </label>
-                      <select
-                        id="projectType"
-                        name="projectType"
+                      <Listbox
                         value={formState.projectType}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-white text-sm transition-all appearance-none"
+                        onChange={(value) =>
+                          setFormState({ ...formState, projectType: value })
+                        }
                       >
-                        <option value="" disabled className="bg-gray-900">
-                          Wybierz rodzaj projektu
-                        </option>
-                        <option value="website" className="bg-gray-900">
-                          Strona internetowa
-                        </option>
-                        <option value="ecommerce" className="bg-gray-900">
-                          Sklep internetowy
-                        </option>
-                        <option value="webapp" className="bg-gray-900">
-                          Aplikacja webowa
-                        </option>
-                        <option value="redesign" className="bg-gray-900">
-                          Redesign istniejącej strony
-                        </option>
-                        <option value="other" className="bg-gray-900">
-                          Inny
-                        </option>
-                      </select>
+                        <div className="relative">
+                          <ListboxButton className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-white text-sm transition-all text-left flex items-center justify-between">
+                            <span
+                              className={
+                                formState.projectType ===
+                                "Wybierz rodzaj projektu"
+                                  ? "text-gray-400"
+                                  : "text-white"
+                              }
+                            >
+                              {formState.projectType}
+                            </span>
+                            <svg
+                              className="w-5 h-5 text-gray-400"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </ListboxButton>
+                          <ListboxOptions className="absolute z-10 w-full mt-1 bg-gray-900 border border-white/10 rounded-lg shadow-lg max-h-60 overflow-auto">
+                            {project_options.map((option) => (
+                              <ListboxOption
+                                key={option.id}
+                                value={option.name}
+                                className="px-4 py-3 text-sm text-white hover:bg-blue-500/20 cursor-pointer transition-colors first:rounded-t-lg last:rounded-b-lg"
+                              >
+                                {option.name}
+                              </ListboxOption>
+                            ))}
+                          </ListboxOptions>
+                        </div>
+                      </Listbox>
                     </div>
                     <div className="space-y-2">
                       <label
@@ -216,29 +247,51 @@ const Page = () => {
                       >
                         Budżet
                       </label>
-                      <select
-                        id="budget"
-                        name="budget"
+                      <Listbox
                         value={formState.budget}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-white text-sm transition-all appearance-none"
+                        onChange={(value) =>
+                          setFormState({ ...formState, budget: value })
+                        }
                       >
-                        <option value="" disabled className="bg-gray-900">
-                          Wybierz przedział budżetowy
-                        </option>
-                        <option value="1500-3000" className="bg-gray-900">
-                          1 500 - 3 000 zł
-                        </option>
-                        <option value="3000-5000" className="bg-gray-900">
-                          3 000 - 5 000 zł
-                        </option>
-                        <option value="5000-10000" className="bg-gray-900">
-                          5 000 - 10 000 zł
-                        </option>
-                        <option value="10000+" className="bg-gray-900">
-                          Powyżej 10 000 zł
-                        </option>
-                      </select>
+                        <div className="relative">
+                          <ListboxButton className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-white text-sm transition-all text-left flex items-center justify-between">
+                            <span
+                              className={
+                                formState.budget ===
+                                "Wybierz przedział budżetowy"
+                                  ? "text-gray-400"
+                                  : "text-white"
+                              }
+                            >
+                              {formState.budget}
+                            </span>
+                            <svg
+                              className="w-5 h-5 text-gray-400"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </ListboxButton>
+                          <ListboxOptions className="absolute z-10 w-full mt-1 bg-gray-900 border border-white/10 rounded-lg shadow-lg max-h-60 overflow-auto">
+                            {price_options.slice(0, -1).map((option) => (
+                              <ListboxOption
+                                key={option.id}
+                                value={option.name}
+                                className="px-4 py-3 text-sm text-white hover:bg-blue-500/20 cursor-pointer transition-colors first:rounded-t-lg last:rounded-b-lg"
+                              >
+                                {option.name}
+                              </ListboxOption>
+                            ))}
+                          </ListboxOptions>
+                        </div>
+                      </Listbox>
                     </div>
                   </div>
 
@@ -336,34 +389,6 @@ const Page = () => {
                     >
                       +48 123 456 789
                     </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <MapPin size={18} className="text-blue-400" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-400">Adres</p>
-                    <p className="text-white">
-                      ul. Przykładowa 123
-                      <br />
-                      00-000 Warszawa
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Clock size={18} className="text-blue-400" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-400">Godziny pracy</p>
-                    <p className="text-white">
-                      Poniedziałek - Piątek
-                      <br />
-                      9:00 - 17:00
-                    </p>
                   </div>
                 </div>
               </div>

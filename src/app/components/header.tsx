@@ -33,9 +33,9 @@ const Header = () => {
   }, [menuOpen]);
 
   const menuItems = [
-    { name: "REALIZACJE", icon: <Layers size={18} />, href: "#" },
-    { name: "USŁUGI", icon: <Briefcase size={18} />, href: "#" },
-    { name: "O NAS", icon: <Users size={18} />, href: "#" },
+    { name: "REALIZACJE", icon: <Layers size={18} />, href: "#realizacje" },
+    { name: "FAQ", icon: <Briefcase size={18} />, href: "#faq" },
+    { name: "O NAS", icon: <Users size={18} />, href: "#onas" },
   ];
 
   return (
@@ -137,6 +137,7 @@ const Header = () => {
                             >
                               <Link
                                 href={item.href}
+                                scroll={true}
                                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/10 transition-all duration-300 group"
                                 onClick={() => setMenuOpen(false)}
                               >
@@ -184,7 +185,8 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  href="#FAQ"
+                  href="#faq"
+                  scroll={true}
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity"
                 >
                   <div className="px-6 py-1.5 text-white border border-white/15 bg-black hover:scale-105    active:scale-95   text-sm  rounded-lg hover:bg-[#8cb3e0]/10 transition-all duration-300">
@@ -194,7 +196,8 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  href="#ONAS"
+                  href="#onas"
+                  scroll={true}
                   className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity"
                 >
                   <div className="px-5 py-1.5 text-white border border-white/15 bg-black text-sm hover:scale-105    active:scale-95   rounded-lg hover:bg-[#8cb3e0]/10 transition-all duration-300">
@@ -205,7 +208,8 @@ const Header = () => {
               <li>
                 <Link
                   href="/kontakt"
-                  className="flex items-center justify-center gap-2 w-full py-1.5  px-4 bg-gradient-to-r hover:scale-105    active:scale-95 from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/20"
+                  scroll={true}
+                  className="flex items-center justify-center gap-2 w-full py-[4.5px]  px-4 bg-gradient-to-r hover:scale-105    active:scale-95 from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/20"
                   onClick={() => setMenuOpen(false)}
                 >
                   <Mail size={16} />
