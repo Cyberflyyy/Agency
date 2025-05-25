@@ -14,6 +14,7 @@ import Stats from "./components/stats";
 import Gap from "./components/gap";
 import Button from "./components/button";
 import { useCursorLight } from "./hooks/useCursorLight";
+import SmoothScroll from "./components/smooth_scrol";
 
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -28,6 +29,7 @@ export default function Home() {
 
   return (
     <div ref={ref} className="w-full  min-h-screen bg-[#000000] text-white">
+      <SmoothScroll />
       <div className="grid grid-cols-[minmax(1px,0.5fr)_minmax(300px,6fr)_minmax(1px,0.5fr)] sm:grid-cols-[minmax(20px,0.7fr)_minmax(400px,5fr)_minmax(20px,0.7fr)] md:grid-cols-[minmax(30px,1fr)_minmax(500px,3fr)_minmax(30px,1fr)] lg:grid-cols-[1fr_5fr_1fr]">
         <Header />
         <Main />
