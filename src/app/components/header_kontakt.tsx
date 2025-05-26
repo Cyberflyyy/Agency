@@ -10,8 +10,11 @@ const HeaderKontakt = () => {
       transition={{ duration: 0.5 }}
       className="col-span-3 py-6 px-4 md:px-8 lg:px-16 flex items-center justify-between"
     >
-      <Link href="/" className="text-2xl  font-medium text-white">
-        HUMBLE
+      <Link
+        href="/"
+        className="text-2xl  font-medium bg-gradient-to-r from-white to-blue-500 bg-clip-text text-transparent"
+      >
+        VISION AGENCY
       </Link>
       <nav>
         <ul className="flex space-x-6">

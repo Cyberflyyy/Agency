@@ -115,7 +115,7 @@ const Header = () => {
                   >
                     <div className="flex flex-col h-full">
                       <div className="p-6 border-b border-white/10 flex items-center justify-between">
-                        <span className="text-lg font-medium bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        <span className="text-lg font-medium bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
                           Menu
                         </span>
                         <button
@@ -141,7 +141,7 @@ const Header = () => {
                                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/10 transition-all duration-300 group"
                                 onClick={() => setMenuOpen(false)}
                               >
-                                <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-white/10 group-hover:border-blue-400/30 transition-all duration-300">
+                                <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-400/20 to-blue-500/20 border border-white/10 group-hover:border-blue-400/30 transition-all duration-300">
                                   {item.icon}
                                 </div>
                                 <span className="font-medium tracking-wide text-sm">

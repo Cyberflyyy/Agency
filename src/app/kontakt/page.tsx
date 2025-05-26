@@ -426,7 +426,7 @@ const Page = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
               Zacznijmy razem
               <br />
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
                 Twój projekt już dziś
               </span>
             </h2>

@@ -12,12 +12,12 @@ const BottomBackdropText: React.FC<BottomBackdropTextProps> = ({
     <div className="relative w-full overflow-hidden">
       <h1
         className="
-          w-full text-center font-orbitron leading-none
+          w-full text-center font-semibold   leading-none
           text-[clamp(5rem,26vw,20rem)] tracking-tight
           transform translate-y-[15%]"
         style={highlightStyle}
       >
-        HUMBLE
+        VISION
       </h1>
     </div>
   );
