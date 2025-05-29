@@ -8,22 +8,22 @@ const AboutUs = () => {
     <>
       <LeftSection />
       <div
-        id="onas"
-        className="border border-white/15 min-h-[500px] flex flex-col items-center justify-center  px-8 sm:px-6 xl:px-8 py-[150px]"
+        id="ONAS"
+        className="border border-white/15 min-h-[500px] flex flex-col items-center justify-center px-8 sm:px-6 xl:px-8 py-[150px]"
       >
         {/* Heading section - improved styling */}
         <div className="w-full flex flex-col items-center justify-center mb-6 sm:mb-8 xl:mb-12">
           <h1 className="text-2xl sm:text-4xl xl:text-4xl font-extrabold text-center px-2 sm:px-4 max-w-4xl leading-tight">
             <span className="block">Zacznijmy razem</span>
-            <span className="block">Twój projekt już dziś</span>
+            <span className="block bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">Twój projekt już dziś</span>
           </h1>
         </div>
         {/* Squares and wide rectangle below */}
-        <div className="w-full flex  flex-col lg:grid xl:grid-cols-2 gap-4 sm:gap-3 xl:gap-4">
+        <div className="w-full flex  flex-col xl:grid xl:grid-cols-2 gap-2 sm:gap-3 xl:gap-4">
           {/* Top-left square */}
-          <div className="bg-[#1a1a1a] backdrop-blur-sm border border-white/10 hover:border-blue-500/50 transition-all duration-300 rounded-2xl xl:rounded-tl-2xl flex flex-col overflow-hidden">
+          <div className="bg-[#1a1a1a] backdrop-blur-sm border border-white/10 hover:border-blue-500 transition-all duration-300 rounded-2xl xl:rounded-tl-2xl flex flex-col overflow-hidden">
             <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-              <p className="mt-2 text-2xl  font-semibold  tracking-tight  text-blue-500 max-lg:text-center">
+              <p className="mt-2 text-2xl  font-semibold  tracking-tight  bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent max-lg:text-center">
                 Wydajność
               </p>
               <p className="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center">
@@ -47,7 +47,7 @@ const AboutUs = () => {
           {/* Top-right card with code preview */}
           <div className="bg-[#1a1a1a] backdrop-blur-sm border border-white/10 hover:border-blue-500 transition-all duration-300 rounded-2xl xl:rounded-tr-2xl overflow-hidden flex flex-col">
             <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-              <p className="mt-2 text-2xl font-semibold  tracking-tight  text-blue-500 max-lg:text-center">
+              <p className="mt-2 text-2xl font-semibold  tracking-tight  bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent  max-lg:text-center">
                 Kod i Jakość
               </p>
               <p className="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center">
@@ -90,9 +90,9 @@ const AboutUs = () => {
           {/* Bottom-wide rectangle spanning two columns */}
 
           <div className="col-span-2">
-            <div className=" bg-[#1a1a1a] backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300 p-3 sm:p-4 xl:p-6 w-full flex flex-col rounded-2xl xl:rounded-bl-2xl xl:rounded-br-2xl">
+            <div className=" bg-[#1a1a1a] backdrop-blur-sm border border-white/10 hover:border-blue-500 transition-all duration-300 p-3 sm:p-4 xl:p-6 w-full flex flex-col rounded-2xl xl:rounded-bl-2xl xl:rounded-br-2xl">
               <div className="ml-2">
-                <p className="mt-2 font-semibold text-2xl tracking-tight  text-blue-500  max-lg:text-center">
+                <p className="mt-2 font-semibold text-2xl tracking-tight  bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent  max-lg:text-center">
                   Nasz Tech Stack
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center mb-6">

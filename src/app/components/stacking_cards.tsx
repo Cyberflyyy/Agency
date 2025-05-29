@@ -19,19 +19,22 @@ const StackingCards = () => {
     >
       <h2 className="text-5xl  font-bold text-white ">Nasze Realizacje</h2>
 
-      {projects.map((project, i) => {
-        const targetScale = 1 - (projects.length - i) * 0.05;
-        return (
-          <Card
-            key={i}
-            i={i}
-            {...project}
-            range={[i * 0.25, 1]}
-            targetScale={targetScale}
-            progress={scrollYProgress}
-          />
-        );
-      })}
+      {projects.map((p, i) => (
+        <Card
+          key={i}
+          meta={p.meta}
+          title={p.title}
+          items={p.items}
+          buttonText={p.buttonText}
+          src={p.src}
+          i={i}
+          range={[0, 1]}
+          targetScale={1.05}
+          progress={scrollYProgress}
+        />
+      ))}
+
+
     </div>
   );
 };
