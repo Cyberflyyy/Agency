@@ -46,9 +46,8 @@ const Card = ({
   const rawOffset = useTransform(scrollYProgress, [0, 1], [100, 0]);
 
   const imageScale = useSpring(rawImageScale, { stiffness: 90, damping: 20 });
-  const offsetX = useSpring(rawOffset,    { stiffness: 90, damping: 20 });
-  const offsetY = useSpring(rawOffset,    { stiffness: 90, damping: 20 });
-
+  const offsetX = useSpring(rawOffset, { stiffness: 90, damping: 20 });
+  const offsetY = useSpring(rawOffset, { stiffness: 90, damping: 20 });
 
   return (
     <div
@@ -97,7 +96,6 @@ const Card = ({
             <span className="font-medium">{buttonText}</span>
             <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
           </motion.button>
-
         </div>
 
         {/* PRAWA KOLUMNA – obraz zsynchronizowany i płynny */}

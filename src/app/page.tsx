@@ -36,7 +36,7 @@ export default function Home() {
         <Gap />
         <LeftSection />
 
-        {windowWidth < 640 ? <NonStackingCards /> : <StackingCards />}
+        {windowWidth < 1250 ? <NonStackingCards /> : <StackingCards />}
         <RightSection />
         <Gap />
         <AboutUs />

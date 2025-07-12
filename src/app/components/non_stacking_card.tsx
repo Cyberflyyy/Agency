@@ -9,9 +9,15 @@ type CardProps = {
   src: string;
 };
 
-const NonStackingCard = ({ meta, title, items, buttonText, src }: CardProps) => {
+const NonStackingCard = ({
+  meta,
+  title,
+  items,
+  buttonText,
+  src,
+}: CardProps) => {
   return (
-    <div className="mb-6 overflow-hidden rounded-xl bg-[#1a1a1a] border border-white/10">
+    <div className="mb-6 overflow-hidden  rounded-xl bg-[#1a1a1a] border border-white/10">
       {/* Obraz */}
       <div className="relative h-48 w-full">
         <Image

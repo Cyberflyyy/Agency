@@ -9,7 +9,7 @@ const BottomBackdropText: React.FC<BottomBackdropTextProps> = ({
   highlightStyle,
 }) => {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden ">
       <h1
         className="
           w-full text-center font-semibold   leading-none
