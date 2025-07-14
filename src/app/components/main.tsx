@@ -4,8 +4,10 @@ import React from "react";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { BackgroundBeams } from "../lib/bc";
+import { useWindowWidth } from "../providers/window-width-provider";
 
 const Main = () => {
+  const { windowWidth } = useWindowWidth();
   return (
     <>
       <div className="border-b border-r border-white/15 min-h-[450px] md:min-h-[650px]"></div>
@@ -76,7 +78,7 @@ const Main = () => {
             </div>
           </motion.div>
         </div>
-        <BackgroundBeams />
+        {windowWidth < 1250 ? <></> : <BackgroundBeams />}
       </div>
       <div className="border-b border-l border-white/15 min-h-[450px] md:min-h-[600px] flex items-center pl-4">
         <span className="text-white/50 text-xs sm:text-sm"></span>
