@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 // import SmoothScroll from "./components/smooth_scrol";
 import { Figtree } from "next/font/google";
+import { AppProviders } from "./providers/app-providers";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -22,8 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="">
       <body className={` ${figtree.className} antialiased relative`}>
+        <AppProviders>{children}</AppProviders>
         {/* <SmoothScroll /> */}
-        {children}
+
         <div
           className="fixed bottom-0 left-0 w-full h-[10vh] pointer-events-none z-50 
     backdrop-blur-md 

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import { ArrowRight, ExternalLink } from "lucide-react";
@@ -46,8 +47,7 @@ const Main = () => {
               className="mb-8 max-w-lg mx-auto text-sm xl:text-md sm:text-base  text-white/70"
             >
               Projektujęmy i tworzymy strony internetowe, które przyciągają
-              uwagę, działają błyskawicznie i realnie wspierają rozwój Twojego
-              biznesu.
+              uwagę i realnie wspierają rozwój Twojego biznesu.
             </motion.p>
 
             <div className="flex justify-center space-x-4">
@@ -61,16 +61,18 @@ const Main = () => {
                 ZOBACZ PROJEKTY
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </motion.button>
-              <motion.button
-                whileHover={{
-                  y: -5,
-                  backgroundColor: "rgba(255, 255, 255, 0.05)",
-                }}
-                className="group flex items-center gap-2 border border-white/15 py-2 sm:py-3 px-4 sm:px-6 text-xs sm:text-sm tracking-wide transition-all rounded-md "
-              >
-                KONTAKT
-                <ExternalLink className="w-4 h-4 group-hover:translate-y-[-2px] transition-transform" />
-              </motion.button>
+              {
+                <motion.button
+                  whileHover={{
+                    y: -5,
+                    backgroundColor: "rgba(255, 255, 255, 0.05)",
+                  }}
+                  className="group flex items-center gap-2 border border-white/15 py-2 sm:py-3 px-4 sm:px-6 text-xs sm:text-sm tracking-wide transition-all rounded-md "
+                >
+                  KONTAKT
+                  <ExternalLink className="w-4 h-4 group-hover:translate-y-[-2px] transition-transform" />
+                </motion.button>
+              }
             </div>
           </motion.div>
         </div>
