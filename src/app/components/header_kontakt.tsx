@@ -9,7 +9,7 @@ const HeaderKontakt = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="col-span-3 py-6 px-4 md:px-8 lg:px-16 flex items-center  "
+        className="col-span-3 py-6 px-4 md:px-8 lg:px-16 flex flex-col items-center mt-8"
       >
         <Link
           href="/"
@@ -17,6 +17,7 @@ const HeaderKontakt = () => {
         >
           Vision Studio
         </Link>
+    
       </motion.header>
     </>
   );

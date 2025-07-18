@@ -15,6 +15,7 @@ import HeaderKontakt from "../components/header_kontakt";
 import Link from "next/link";
 import BottomBackdropText from "../components/footer";
 import { useCursorLight } from "../hooks/useCursorLight";
+import { GlowingEffect } from "../components/glowing-effect";
 const price_options = [
   { id: 1, name: "1 500 - 3 000 zł" },
   { id: 2, name: "3 000 - 5 000 zł" },
@@ -98,8 +99,13 @@ const Page = () => {
             transition={{ duration: 0.5 }}
             className="text-center px-4"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent mb-4">
-              Porozmawiajmy o Twoim projekcie
+            <h1 className="text-3xl sm:text-4xl md:text-4xl xl:text-5xl mb-6 font-medium">
+              <span className="block font-bold text-white">
+                Porozmawiajmy o
+              </span>
+              <span className="block text-transparent font-bold bg-clip-text bg-gradient-to-r from-blue-400 to-blue-500 pb-3">
+                Twoim projekcie
+              </span>
             </h1>
             <p className="text-gray-400 max-w-2xl  mx-auto text-sm md:text-base">
               Wypełnij formularz poniżej, a nasz zespół skontaktuje się z Tobą w
@@ -108,14 +114,102 @@ const Page = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 px-4 md:px-8 lg:px-16 mt-12 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 px-4 md:px-8 lg:px-16 mt-12 mb-20">
+            {/* Mobile: kontakt na górze, potem formularz; Desktop: formularz po lewej, kontakt po prawej */}
+            <div className="flex flex-col gap-6 lg:hidden">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="space-y-6"
+              >
+                <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm order-1">
+                  <h3 className="text-lg font-medium text-white mb-4">
+                    Informacje kontaktowe
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3 flex-wrap xs:flex-nowrap sm:flex-nowrap md:flex-nowrap lg:flex-row max-w-xs:flex-col">
+                      <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Mail size={18} className="text-blue-400" />
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-400">Email</p>
+                        <a
+                          href="mailto:vision.agency.kontakt@gmail.com"
+                          className="text-white hover:text-blue-400 transition-colors no-underline text-xs md:text-sm lg:text-base"
+                          style={{ textDecoration: 'none' }}
+                        >
+                          vision.agency.kontakt@gmail.com
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Zamiast jednego głównego telefonu, dwa osobne kontakty */}
+                    <div className="flex items-start gap-3">
+                      <div className="flex flex-col gap-4">
+                        <div className="flex items-center gap-2">
+                          <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                            <Phone size={18} className="text-blue-400" />
+                          </div>
+                          <div>
+                            <span className="text-blue-400 font-medium block text-sm md:text-base lg:text-lg">Bartłomiej Karpiński</span>
+                            <a
+                              href="tel:538106144"
+                              className="text-white hover:text-blue-400 transition-colors block no-underline text-sm md:text-base lg:text-lg"
+                              style={{ textDecoration: 'none' }}
+                            >
+                              538 106 144
+                            </a>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                            <Phone size={18} className="text-blue-400" />
+                          </div>
+                          <div>
+                            <span className="text-blue-400 font-medium block text-sm md:text-base lg:text-lg">Kacper Kuchciński</span>
+                            <a
+                              href="tel:724788884"
+                              className="text-white hover:text-blue-400 transition-colors block no-underline text-sm md:text-base lg:text-lg"
+                              style={{ textDecoration: 'none' }}
+                            >
+                              724 788 884
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm order-3 mt-6">
+                  <h3 className="text-lg font-medium text-white mb-4">
+                    Powrót do strony głownej
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-4">
+                    Chcesz jeszcze raz zobaczyć naszą ofertę? Odwiedź naszą stronę
+                    główną, aby zapoznać się z naszymi usługami i projektami.
+                  </p>
+                  <Link
+                    href="/"
+                    className="flex items-center justify-between w-full px-4 py-3 bg-black border border-blue-500/30 rounded-lg text-blue-400 hover:bg-blue-500/10 transition-all group"
+                  >
+                    <span> Powrót </span>
+                    <ArrowRight
+                      size={16}
+                      className="group-hover:translate-x-1 transition-transform"
+                    />
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="md:col-span-2"
             >
-              <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 md:p-8 backdrop-blur-sm">
+              <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 md:p-8 backdrop-blur-sm order-2">
                 {!isSubmitted ? (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
@@ -360,70 +454,93 @@ const Page = () => {
                 )}
               </div>
             </motion.div>
+            <div className="hidden lg:block">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="space-y-6"
+              >
+                <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+                  <h3 className="text-lg font-medium text-white mb-4">
+                    Informacje kontaktowe
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-3 ">
+                      <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Mail size={18} className="text-blue-400" />
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-400">Email</p>
+                        <a
+                          href="mailto:vision.agency.kontakt@gmail.com"
+                          className="text-white hover:text-blue-400 transition-colors no-underline text-xs md:text-sm lg:text-base"
+                          style={{ textDecoration: 'none' }}
+                        >
+                          vision.agency.kontakt@gmail.com
+                        </a>
+                      </div>
+                    </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="space-y-6"
-            >
-              <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
-                <h3 className="text-lg font-medium text-white mb-4">
-                  Informacje kontaktowe
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3 ">
-                    <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Mail size={18} className="text-blue-400" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-400">Email</p>
-                      <a
-                        href="mailto:kontakt@example.pl"
-                        className="text-white hover:text-blue-400 transition-colors"
-                      >
-                        kontakt@example.pl
-                      </a>
-                    </div>
-                  </div>
 
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Phone size={18} className="text-blue-400" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-400">Telefon</p>
-                      <a
-                        href="tel:+48123456789"
-                        className="text-white hover:text-blue-400 transition-colors"
-                      >
-                        +48 123 456 789
-                      </a>
+                    <div className="flex items-start gap-3">
+                      <div className="flex flex-col gap-4">
+                        <div className="flex items-center gap-2">
+                          <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                            <Phone size={18} className="text-blue-400" />
+                          </div>
+                          <div>
+                            <span className="text-blue-400 font-medium block text-sm md:text-base lg:text-lg">Bartłomiej Karpiński</span>
+                            <a
+                              href="tel:538106144"
+                              className="text-white hover:text-blue-400 transition-colors block no-underline text-sm md:text-base lg:text-lg"
+                              style={{ textDecoration: 'none' }}
+                            >
+                              538 106 144
+                            </a>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                            <Phone size={18} className="text-blue-400" />
+                          </div>
+                          <div>
+                            <span className="text-blue-400 font-medium block text-sm md:text-base lg:text-lg">Kacper Kuchciński</span>
+                            <a
+                              href="tel:724788884"
+                              className="text-white hover:text-blue-400 transition-colors block no-underline text-sm md:text-base lg:text-lg"
+                              style={{ textDecoration: 'none' }}
+                            >
+                              724 788 884
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
-                <h3 className="text-lg font-medium text-white mb-4">
-                  Powrót do strony głownej
-                </h3>
-                <p className="text-gray-400 text-sm mb-4">
-                  Chcesz jeszcze raz zobaczyć naszą ofertę? Odwiedź naszą stronę
-                  główną, aby zapoznać się z naszymi usługami i projektami.
-                </p>
-                <Link
-                  href="/"
-                  className="flex items-center justify-between w-full px-4 py-3 bg-black border border-blue-500/30 rounded-lg text-blue-400 hover:bg-blue-500/10 transition-all group"
-                >
-                  <span> Powrót </span>
-                  <ArrowRight
-                    size={16}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
-                </Link>
-              </div>
-            </motion.div>
+                <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+                  <h3 className="text-lg font-medium text-white mb-4">
+                    Powrót do strony głownej
+                  </h3>
+                  <p className="text-gray-400 text-sm mb-4">
+                    Chcesz jeszcze raz zobaczyć naszą ofertę? Odwiedź naszą stronę
+                    główną, aby zapoznać się z naszymi usługami i projektami.
+                  </p>
+                  <Link
+                    href="/"
+                    className="flex items-center justify-between w-full px-4 py-3 bg-black border border-blue-500/30 rounded-lg text-blue-400 hover:bg-blue-500/10 transition-all group"
+                  >
+                    <span> Powrót </span>
+                    <ArrowRight
+                      size={16}
+                      className="group-hover:translate-x-1 transition-transform"
+                    />
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
           </div>
 
           <motion.div
@@ -441,7 +558,8 @@ const Page = () => {
                 </span>
               </h2>
               <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-                <div className="bg-black/50 border border-white/10 rounded-xl p-5 backdrop-blur-sm">
+                <div className="relative bg-black/50 border border-white/10 rounded-xl p-5 backdrop-blur-sm">
+                  <GlowingEffect glow={true} disabled={false} />
                   <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-4">
                     <span className="text-xl font-bold text-blue-400">1</span>
                   </div>
@@ -451,7 +569,8 @@ const Page = () => {
                   </p>
                 </div>
 
-                <div className="bg-black/50 border border-white/10 rounded-xl p-5 backdrop-blur-sm">
+                <div className="relative bg-black/50 border border-white/10 rounded-xl p-5 backdrop-blur-sm">
+                  <GlowingEffect glow={true} disabled={false} />
                   <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-4">
                     <span className="text-xl font-bold text-blue-400">2</span>
                   </div>
@@ -461,7 +580,8 @@ const Page = () => {
                   </p>
                 </div>
 
-                <div className="bg-black/50 border border-white/10 rounded-xl p-5 backdrop-blur-sm">
+                <div className="relative bg-black/50 border border-white/10 rounded-xl p-5 backdrop-blur-sm">
+                  <GlowingEffect glow={true} disabled={false} />
                   <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mx-auto mb-4">
                     <span className="text-xl font-bold text-blue-400">3</span>
                   </div>
