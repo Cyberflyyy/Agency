@@ -122,10 +122,14 @@ const GlowingEffect = memo(
         <div
           className={cn(
             "pointer-events-none absolute -inset-px hidden rounded-[inherit] border opacity-0 transition-opacity",
-            glow && "opacity-100",
+            glow && "opacity-100 border-[rgba(59,130,246,0.4)]",
             variant === "white" && "border-white",
             disabled && "!block"
           )}
+          style={{
+            borderColor: glow ? `rgba(59,130,246,calc(0.4 * var(--active, 0)))` : undefined,
+            opacity: glow ? 'var(--active, 0)' : undefined,
+          }}
         />
         <div
           ref={containerRef}

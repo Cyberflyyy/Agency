@@ -14,7 +14,7 @@ import { Send, Mail, Phone, ArrowRight, CheckCircle } from "lucide-react";
 import HeaderKontakt from "../components/header_kontakt";
 import Link from "next/link";
 import BottomBackdropText from "../components/footer";
-import { useCursorLight } from "../hooks/useCursorLight";
+import { useCursorLight } from "../providers/cursor-light-provider";
 import { GlowingEffect } from "../components/glowing-effect";
 const price_options = [
   { id: 1, name: "1 500 - 3 000 zł" },
