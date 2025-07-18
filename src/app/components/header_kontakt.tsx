@@ -13,9 +13,9 @@ const HeaderKontakt = () => {
       >
         <Link
           href="/"
-          className="text-2xl  font-medium bg-gradient-to-r from-white to-blue-500 bg-clip-text text-transparent"
+          className="block text-transparent font-bold  bg-clip-text bg-gradient-to-r pb-3  from-blue-300 to-blue-600"
         >
-          VISION AGENCY
+          Vision Studio
         </Link>
       </motion.header>
     </>

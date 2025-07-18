@@ -14,8 +14,8 @@ const BottomBackdropText: React.FC<BottomBackdropTextProps> = ({
         className="
           w-full text-center font-semibold   leading-none
           text-[clamp(5rem,26vw,20rem)] tracking-tight
-          transform translate-y-[15%]"
-        style={highlightStyle}
+          transform translate-y-[15%] user-select-none"
+        style={{ ...highlightStyle, userSelect: 'none' }}
       >
         VISION
       </h1>

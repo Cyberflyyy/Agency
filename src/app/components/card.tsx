@@ -42,8 +42,8 @@ const Card = ({
     offset: ["start end", "start start"],
   });
 
-  const rawImageScale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const rawOffset = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  const rawImageScale = useTransform(scrollYProgress, [0, 1], [0.95, 1]);
+  const rawOffset = useTransform(scrollYProgress, [0, 1], [30, 0]);
 
   const imageScale = useSpring(rawImageScale, { stiffness: 90, damping: 20 });
   const offsetX = useSpring(rawOffset, { stiffness: 90, damping: 20 });
@@ -101,7 +101,7 @@ const Card = ({
         {/* PRAWA KOLUMNA – obraz zsynchronizowany i płynny */}
         <motion.div
           style={{ scale: imageScale, x: offsetX, y: offsetY }}
-          className="absolute bottom-0 right-0 w-[55%] h-[90%] overflow-hidden rounded-tl-2xl"
+          className="absolute bottom-0 right-0 w-[64%] h-[90%] overflow-hidden rounded-tl-2xl"
         >
           <Image src={src} alt={title} fill className="object-cover" />
         </motion.div>

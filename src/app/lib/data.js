@@ -1,15 +1,15 @@
 // lib/data.ts
 export const projects = [
   {
-    meta: "ACME CORP • 2022",
-    title: "Dark SaaS Landing Page",
+    meta: "IMPERIUM • 2025",
+    title: "Strona internetowa biura księgowego",
     items: [
-      "Enhanced user experience by 40%",
-      "Improved site speed by 50%",
-      "Increased mobile traffic by 35%",
+      "Szybka, responsywna strona na każde urządzenie",
+      "Nowoczesny design, skuteczna promocja biura",
+      "SEO i integracje zwiększają widoczność firmy",
     ],
-    buttonText: "Visit Live Site",
-    src: "/corpcomment.png",
+    buttonText: "Zobacz stronę",
+    src: "/imperium.png",
   },
   {
     meta: "BETA STUDIO • 2021",
@@ -23,15 +23,15 @@ export const projects = [
     src: "/Forumtin.png",
   },
   {
-    meta: "GAMMA INC • 2023",
-    title: "Mobile App Redesign",
+    meta: "SPS • 2025",
+    title: "Strona internetowa firmy SPS Elektro",
     items: [
-      "Streamlined onboarding flow",
-      "Increased retention by 30%",
-      "Achieved 4.8★ rating on the App Store",
+      "Realizacje pokazane w atrakcyjnej galerii",
+      "Oferta przedstawiona w czytelny sposób",
+      "Kontakt szybki, intuicyjny i wygodny",
     ],
-    buttonText: "Explore Case Study",
-    src: "/rmtdev.png",
+    buttonText: "Zobacz stronę",
+    src: "/sps.png",
   },
   {
     meta: "DELTA MARKETING • 2020",
