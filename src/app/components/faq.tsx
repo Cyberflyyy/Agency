@@ -49,23 +49,23 @@ const Rename1 = () => {
       id: 4,
       question: "Ile kosztuje stworzenie strony internetowej?",
       answer:
-        "Koszt zależy od złożoności strony. Prosta strona zaczyna się już od 1500 zł, ale każdą wycenę przygotowujemy indywidualnie.",
+        "Koszt zależy od złożoności strony. Prosta strona zaczyna się już od 2500 zł, ale każdą wycenę przygotowujemy indywidualnie.",
       order_number: 4,
       category: "Oferta",
     },
     {
       id: 5,
-      question: "Czy mogę później samodzielnie edytować stronę?",
+      question: "Jak długo trwa realizacja strony?",
       answer:
-        "Tak! Tworzymy strony w systemach, które pozwalają na łatwą edycję treści, np. WordPress lub własny panel administracyjny.",
+        "Typowy czas realizacji to od 2 do 6 tygodni, w zależności od złożoności projektu i dostępności materiałów od klienta.",
       order_number: 5,
       category: "Współpraca",
     },
     {
       id: 6,
-      question: "Czy mogę później samodzielnie edytować stronę?",
+      question: "Czy strona będzie responsywna (mobilna)?",
       answer:
-        "Tak! Tworzymy strony w systemach, które pozwalają na łatwą edycję treści, np. WordPress lub własny panel administracyjny.",
+        "Tak. Wszystkie nasze strony są w pełni responsywne i dostosowane do różnych urządzeń – smartfonów, tabletów i komputerów.",
       order_number: 5,
       category: "Współpraca",
     },
@@ -125,7 +125,7 @@ const Rename1 = () => {
           <LeftSection></LeftSection>
           <section
             id="faq"
-            className="coll-span-3 border-b border-white/15 min-h-[1000px]  flex flex-col items-center justify-center "
+            className="coll-span-3  border-white/15 min-h-[1000px]  flex flex-col items-center justify-center "
           >
             <h2 className="text-3xl  md:text-4xl xl:text-5xl mt-8 font-semibold mb-8 text-center">
               <span className="">Często zadawane pytania</span>

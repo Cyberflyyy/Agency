@@ -5,10 +5,11 @@ import Main from "./components/main";
 import AboutUs from "./components/about_us";
 import Header from "./components/header";
 import EnhancedFooter from "./components/enhanced-footer";
-import Reneame1 from "./components/reneame1";
+import Reneame1 from "./components/faq";
 import Stats from "./components/stats";
 import Gap from "./components/gap";
 import EnhancedButton from "./components/enhanced-button";
+import Gapfaq from "./components/gap-faq";
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
         <AboutUs />
         <Gap />
         <Reneame1 />
-        <Gap />
+        <Gapfaq />
         <EnhancedButton />
       </div>
       <EnhancedFooter />

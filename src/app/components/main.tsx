@@ -11,7 +11,7 @@ const Main = () => {
   return (
     <>
       <div className="border-b border-r border-white/15 min-h-[450px] md:min-h-[650px]"></div>
-      <div className="border-b -mt-[1px]   border-t pb-24 border-white/15 min-h-[490px] pt-10 md:pt-0 md:min-h-[600px]  relative overflow-hidden flex items-center justify-center ">
+      <div className=" -mt-[1px]   border-t pb-24 border-white/15 min-h-[490px] pt-10 md:pt-0 md:min-h-[600px]  relative overflow-hidden flex items-center justify-center ">
         <div
           className="absolute inset-0 opacity-30"
           style={{

@@ -34,8 +34,9 @@ const Header = () => {
 
   const menuItems = [
     { name: "REALIZACJE", icon: <Layers size={18} />, href: "#realizacje" },
-    { name: "FAQ", icon: <Briefcase size={18} />, href: "#faq" },
-    { name: "O NAS", icon: <Users size={18} />, href: "#onas" },
+
+    { name: "STACK", icon: <Briefcase size={18} />, href: "#onas" },
+    { name: "FAQ", icon: <Users size={18} />, href: "#faq" },
   ];
 
   return (
@@ -141,7 +142,7 @@ const Header = () => {
                                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/10 transition-all duration-300 group"
                                 onClick={() => setMenuOpen(false)}
                               >
-                                <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-br from-blue-400/20 to-blue-500/20 border border-white/10 group-hover:border-blue-400/30 transition-all duration-300">
+                                <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-blue-400/20 to-blue-500/20 border border-white/10 group-hover:border-blue-400/30 transition-all duration-300">
                                   {item.icon}
                                 </div>
                                 <span className="font-medium tracking-wide text-sm">
@@ -183,6 +184,18 @@ const Header = () => {
                   </div>
                 </Link>
               </li>
+
+              <li>
+                <Link
+                  href="#onas"
+                  scroll={true}
+                  className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity"
+                >
+                  <div className="px-5 py-1.5 text-white border border-white/15 bg-black text-sm hover:scale-105    active:scale-95   rounded-lg hover:bg-[#8cb3e0]/10 transition-all duration-300">
+                    STACK
+                  </div>
+                </Link>
+              </li>
               <li>
                 <Link
                   href="#faq"
@@ -191,17 +204,6 @@ const Header = () => {
                 >
                   <div className="px-6 py-1.5 text-white border border-white/15 bg-black hover:scale-105    active:scale-95   text-sm  rounded-lg hover:bg-[#8cb3e0]/10 transition-all duration-300">
                     FAQ
-                  </div>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#onas"
-                  scroll={true}
-                  className="text-xs sm:text-sm tracking-wide hover:opacity-80 transition-opacity"
-                >
-                  <div className="px-5 py-1.5 text-white border border-white/15 bg-black text-sm hover:scale-105    active:scale-95   rounded-lg hover:bg-[#8cb3e0]/10 transition-all duration-300">
-                    O NAS
                   </div>
                 </Link>
               </li>
