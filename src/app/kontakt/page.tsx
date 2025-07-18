@@ -14,10 +14,10 @@ import { Send, Mail, Phone, ArrowRight, CheckCircle } from "lucide-react";
 import HeaderKontakt from "../components/header_kontakt";
 import Link from "next/link";
 import BottomBackdropText from "../components/footer";
-
+import { useCursorLight } from "../providers/cursor-light-provider";
 import { GlowingEffect } from "../components/glowing-effect";
 const price_options = [
-  { id: 1, name: "1 500 - 3 000 zł" },
+  { id: 1, name: "2 500 - 3 000 zł" },
   { id: 2, name: "3 000 - 5 000 zł" },
   { id: 3, name: "5 000 - 10 000 zł" },
   { id: 4, name: "Powyżej 10 000 zł" },
@@ -33,6 +33,8 @@ const project_options = [
 ];
 
 const Page = () => {
+  const { ref, style } = useCursorLight();
+
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -129,18 +131,18 @@ const Page = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 px-4 md:px-8 lg:px-16 mt-12 mb-20">
             {/* Mobile: kontakt na górze, potem formularz; Desktop: formularz po lewej, kontakt po prawej */}
-            <div className="flex flex-col gap-6 lg:hidden">
+            <div className="flex flex-col  gap-6 lg:hidden md:-mr-8 ">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="space-y-6 order-1"
+                className="space-y-6"
               >
-                <div className=" border border-white/10 rounded-xl p-6 w-auto backdrop-blur-sm">
-                  <h3 className="text-lg font-medium text-white mb-4 text-nowrap">
+                <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm order-1">
+                  <h3 className="text-lg font-medium text-white mb-4">
                     Informacje kontaktowe
                   </h3>
-                  <div className="space-y-4">
+                  <div className="space-y-4 ">
                     <div className="flex items-start gap-3 flex-wrap xs:flex-nowrap sm:flex-nowrap md:flex-nowrap lg:flex-row max-w-xs:flex-col">
                       <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Mail size={18} className="text-blue-400" />
@@ -149,7 +151,7 @@ const Page = () => {
                         <p className="text-sm text-gray-400">Email</p>
                         <a
                           href="mailto:vision.agency.kontakt@gmail.com"
-                          className="text-white hover:text-blue-400 transition-colors no-underline text-xs md:text-sm lg:text-base break-all"
+                          className="text-white hover:text-blue-400 transition-colors no-underline text-xs md:text-sm lg:text-base"
                           style={{ textDecoration: "none" }}
                         >
                           vision.agency.kontakt@gmail.com
@@ -197,34 +199,6 @@ const Page = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="space-y-6 order-3 hidden"
-              >
-                <div className="bg-gray-900/50 border border-white/10  rounded-xl p-6 backdrop-blur-sm">
-                  <h3 className="text-lg font-medium text-white mb-4">
-                    Powrót do strony głownej
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-4">
-                    Chcesz jeszcze raz zobaczyć naszą ofertę? Odwiedź naszą
-                    stronę główną, aby zapoznać się z naszymi usługami i
-                    projektami.
-                  </p>
-                  <Link
-                    href="/"
-                    className="flex items-center justify-between w-full px-4 py-3 bg-black border border-blue-500/30 rounded-lg text-blue-400 hover:bg-blue-500/10 transition-all group"
-                  >
-                    <span> Powrót </span>
-                    <ArrowRight
-                      size={16}
-                      className="group-hover:translate-x-1 transition-transform"
-                    />
-                  </Link>
                 </div>
               </motion.div>
             </div>
@@ -478,16 +452,7 @@ const Page = () => {
                   </div>
                 )}
               </div>
-            </motion.div>
-
-            {/* Sekcja "Powrót do strony głównej" tylko dla mobilnych - na samym dole */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="lg:hidden order-3 col-span-full"
-            >
-              <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+              <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm order-3 mt-6 block lg:hidden ">
                 <h3 className="text-lg font-medium text-white mb-4">
                   Powrót do strony głownej
                 </h3>
@@ -507,7 +472,6 @@ const Page = () => {
                 </Link>
               </div>
             </motion.div>
-
             <div className="hidden lg:block">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -515,8 +479,8 @@ const Page = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="space-y-6"
               >
-                <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm  w-full ">
-                  <h3 className="text-lg font-medium text-white mb-4 text-nowrap">
+                <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+                  <h3 className="text-lg font-medium text-white mb-4">
                     Informacje kontaktowe
                   </h3>
                   <div className="space-y-4">
@@ -524,11 +488,11 @@ const Page = () => {
                       <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Mail size={18} className="text-blue-400" />
                       </div>
-                      <div className="">
+                      <div>
                         <p className="text-sm text-gray-400">Email</p>
                         <a
                           href="mailto:vision.agency.kontakt@gmail.com"
-                          className="text-white hover:text-blue-400 transition-colors no-underline text-xs md:text-sm lg:text-base break-all "
+                          className="text-white hover:text-blue-400 transition-colors no-underline text-xs md:text-sm lg:text-base  break-all"
                           style={{ textDecoration: "none" }}
                         >
                           vision.agency.kontakt@gmail.com
@@ -577,7 +541,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+                <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm hidden lg:block">
                   <h3 className="text-lg font-medium text-white mb-4">
                     Powrót do strony głownej
                   </h3>
