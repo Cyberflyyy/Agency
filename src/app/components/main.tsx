@@ -38,7 +38,7 @@ const Main = () => {
                 Nowoczesne strony
               </span>
               <span className="block text-transparent font-bold  bg-clip-text bg-gradient-to-r pb-3  from-blue-400 to-blue-500">
-                Przyciągają uwagę
+                Przyciągające uwagę
               </span>
             </h1>
 

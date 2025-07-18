@@ -44,7 +44,7 @@ const Page = () => {
     projectType: "Wybierz rodzaj projektu",
     budget: "Wybierz przedział budżetowy",
   });
-
+  console.log("Form state:", formState);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   console.log("Form state:", formState);
@@ -63,32 +63,47 @@ const Page = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-
-    // Reset form after submission
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormState({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-        projectType: "Wybierz rodzaj projektu",
-        budget: "Wybierz przedział budżetowy",
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
       });
-    }, 3000);
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        // Reset form after submission
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormState({
+            name: "",
+            email: "",
+            phone: "",
+            subject: "",
+            message: "",
+            projectType: "Wybierz rodzaj projektu",
+            budget: "Wybierz przedział budżetowy",
+          });
+        }, 3000);
+      } else {
+        console.error("Failed to send email");
+        alert("Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <>
       <div
         ref={ref}
-        className="grid grid-cols-[minmax(1px,0.5fr)_minmax(300px,6fr)_minmax(1px,0.5fr)] bg-black sm:grid-cols-[minmax(20px,0.7fr)_minmax(400px,5fr)_minmax(20px,0.7fr)] md:grid-cols-[minmax(30px,1fr)_minmax(500px,3fr)_minmax(30px,1fr)] lg:grid-cols-[1fr_5fr_1fr]"
+        className="grid grid-cols-[minmax(1px,0.5fr)_minmax(300px,6fr)_minmax(1px,0.5fr)] bg-black sm:grid-cols-[minmax(20px,0.7fr)_minmax(400px,5fr)_minmax(20px,0.7fr)] lg:grid-cols-[minmax(30px,1fr)_minmax(500px,3fr)_minmax(30px,1fr)] xl:grid-cols-[1fr_5fr_1fr]"
       >
         <HeaderKontakt />
 
