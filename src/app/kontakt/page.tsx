@@ -136,10 +136,10 @@ const Page = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="space-y-6"
+                className="space-y-6 order-1"
               >
-                <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm order-1">
-                  <h3 className="text-lg font-medium text-white mb-4">
+                <div className=" border border-white/10 rounded-xl p-6 w-auto backdrop-blur-sm">
+                  <h3 className="text-lg font-medium text-white mb-4 text-nowrap">
                     Informacje kontaktowe
                   </h3>
                   <div className="space-y-4">
@@ -151,8 +151,8 @@ const Page = () => {
                         <p className="text-sm text-gray-400">Email</p>
                         <a
                           href="mailto:vision.agency.kontakt@gmail.com"
-                          className="text-white hover:text-blue-400 transition-colors no-underline text-xs md:text-sm lg:text-base"
-                          style={{ textDecoration: 'none' }}
+                          className="text-white hover:text-blue-400 transition-colors no-underline text-xs md:text-sm lg:text-base break-all"
+                          style={{ textDecoration: "none" }}
                         >
                           vision.agency.kontakt@gmail.com
                         </a>
@@ -167,11 +167,13 @@ const Page = () => {
                             <Phone size={18} className="text-blue-400" />
                           </div>
                           <div>
-                            <span className="text-blue-400 font-medium block text-sm md:text-base lg:text-lg">Bartłomiej Karpiński</span>
+                            <span className="text-blue-400 font-medium block text-sm md:text-base lg:text-lg">
+                              Bartłomiej Karpiński
+                            </span>
                             <a
                               href="tel:538106144"
                               className="text-white hover:text-blue-400 transition-colors block no-underline text-sm md:text-base lg:text-lg"
-                              style={{ textDecoration: 'none' }}
+                              style={{ textDecoration: "none" }}
                             >
                               538 106 144
                             </a>
@@ -182,11 +184,13 @@ const Page = () => {
                             <Phone size={18} className="text-blue-400" />
                           </div>
                           <div>
-                            <span className="text-blue-400 font-medium block text-sm md:text-base lg:text-lg">Kacper Kuchciński</span>
+                            <span className="text-blue-400 font-medium block text-sm md:text-base lg:text-lg">
+                              Kacper Kuchciński
+                            </span>
                             <a
                               href="tel:724788884"
                               className="text-white hover:text-blue-400 transition-colors block no-underline text-sm md:text-base lg:text-lg"
-                              style={{ textDecoration: 'none' }}
+                              style={{ textDecoration: "none" }}
                             >
                               724 788 884
                             </a>
@@ -196,14 +200,22 @@ const Page = () => {
                     </div>
                   </div>
                 </div>
+              </motion.div>
 
-                <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm order-3 mt-6">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="space-y-6 order-3 hidden"
+              >
+                <div className="bg-gray-900/50 border border-white/10  rounded-xl p-6 backdrop-blur-sm">
                   <h3 className="text-lg font-medium text-white mb-4">
                     Powrót do strony głownej
                   </h3>
                   <p className="text-gray-400 text-sm mb-4">
-                    Chcesz jeszcze raz zobaczyć naszą ofertę? Odwiedź naszą stronę
-                    główną, aby zapoznać się z naszymi usługami i projektami.
+                    Chcesz jeszcze raz zobaczyć naszą ofertę? Odwiedź naszą
+                    stronę główną, aby zapoznać się z naszymi usługami i
+                    projektami.
                   </p>
                   <Link
                     href="/"
@@ -469,6 +481,34 @@ const Page = () => {
                 )}
               </div>
             </motion.div>
+
+            {/* Sekcja "Powrót do strony głównej" tylko dla mobilnych - na samym dole */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="lg:hidden order-3 col-span-full"
+            >
+              <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+                <h3 className="text-lg font-medium text-white mb-4">
+                  Powrót do strony głownej
+                </h3>
+                <p className="text-gray-400 text-sm mb-4">
+                  Chcesz jeszcze raz zobaczyć naszą ofertę? Odwiedź naszą stronę
+                  główną, aby zapoznać się z naszymi usługami i projektami.
+                </p>
+                <Link
+                  href="/"
+                  className="flex items-center justify-between w-full px-4 py-3 bg-black border border-blue-500/30 rounded-lg text-blue-400 hover:bg-blue-500/10 transition-all group"
+                >
+                  <span> Powrót </span>
+                  <ArrowRight
+                    size={16}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
+                </Link>
+              </div>
+            </motion.div>
             <div className="hidden lg:block">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -476,8 +516,8 @@ const Page = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="space-y-6"
               >
-                <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
-                  <h3 className="text-lg font-medium text-white mb-4">
+                <div className="bg-gray-900/50 border border-white/10 rounded-xl p-6 backdrop-blur-sm  w-full ">
+                  <h3 className="text-lg font-medium text-white mb-4 text-nowrap">
                     Informacje kontaktowe
                   </h3>
                   <div className="space-y-4">
@@ -485,18 +525,17 @@ const Page = () => {
                       <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Mail size={18} className="text-blue-400" />
                       </div>
-                      <div>
+                      <div className="">
                         <p className="text-sm text-gray-400">Email</p>
                         <a
                           href="mailto:vision.agency.kontakt@gmail.com"
-                          className="text-white hover:text-blue-400 transition-colors no-underline text-xs md:text-sm lg:text-base"
-                          style={{ textDecoration: 'none' }}
+                          className="text-white hover:text-blue-400 transition-colors no-underline text-xs md:text-sm lg:text-base break-all "
+                          style={{ textDecoration: "none" }}
                         >
                           vision.agency.kontakt@gmail.com
                         </a>
                       </div>
                     </div>
-
 
                     <div className="flex items-start gap-3">
                       <div className="flex flex-col gap-4">
@@ -505,11 +544,13 @@ const Page = () => {
                             <Phone size={18} className="text-blue-400" />
                           </div>
                           <div>
-                            <span className="text-blue-400 font-medium block text-sm md:text-base lg:text-lg">Bartłomiej Karpiński</span>
+                            <span className="text-blue-400 font-medium block text-sm md:text-base lg:text-lg">
+                              Bartłomiej Karpiński
+                            </span>
                             <a
                               href="tel:538106144"
                               className="text-white hover:text-blue-400 transition-colors block no-underline text-sm md:text-base lg:text-lg"
-                              style={{ textDecoration: 'none' }}
+                              style={{ textDecoration: "none" }}
                             >
                               538 106 144
                             </a>
@@ -520,11 +561,13 @@ const Page = () => {
                             <Phone size={18} className="text-blue-400" />
                           </div>
                           <div>
-                            <span className="text-blue-400 font-medium block text-sm md:text-base lg:text-lg">Kacper Kuchciński</span>
+                            <span className="text-blue-400 font-medium block text-sm md:text-base lg:text-lg">
+                              Kacper Kuchciński
+                            </span>
                             <a
                               href="tel:724788884"
                               className="text-white hover:text-blue-400 transition-colors block no-underline text-sm md:text-base lg:text-lg"
-                              style={{ textDecoration: 'none' }}
+                              style={{ textDecoration: "none" }}
                             >
                               724 788 884
                             </a>
@@ -540,8 +583,9 @@ const Page = () => {
                     Powrót do strony głownej
                   </h3>
                   <p className="text-gray-400 text-sm mb-4">
-                    Chcesz jeszcze raz zobaczyć naszą ofertę? Odwiedź naszą stronę
-                    główną, aby zapoznać się z naszymi usługami i projektami.
+                    Chcesz jeszcze raz zobaczyć naszą ofertę? Odwiedź naszą
+                    stronę główną, aby zapoznać się z naszymi usługami i
+                    projektami.
                   </p>
                   <Link
                     href="/"
