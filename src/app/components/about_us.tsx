@@ -8,14 +8,16 @@ const AboutUs = () => {
     <>
       <LeftSection />
       <div
-        id="ONAS"
+        id="onas"
         className="border border-white/15 min-h-[500px] flex flex-col items-center justify-center px-8 sm:px-6 xl:px-8 py-[150px]"
       >
         {/* Heading section - improved styling */}
         <div className="w-full flex flex-col items-center justify-center mb-6 sm:mb-8 xl:mb-12">
           <h1 className="text-2xl sm:text-4xl xl:text-4xl font-extrabold text-center px-2 sm:px-4 max-w-4xl leading-tight">
             <span className="block">Zacznijmy razem</span>
-            <span className="block bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">Twój projekt już dziś</span>
+            <span className="block bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">
+              Twój projekt już dziś
+            </span>
           </h1>
         </div>
         {/* Squares and wide rectangle below */}

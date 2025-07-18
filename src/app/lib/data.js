@@ -12,14 +12,14 @@ export const projects = [
     src: "/imperium.png",
   },
   {
-    meta: "BETA STUDIO • 2021",
-    title: "Creative Portfolio Showcase",
+    meta: "ForumTin • 2025",
+    title: "Forum kierunku na Politechnice Wrocławskiej",
     items: [
-      "Showcased 150+ projects in responsive grid",
-      "Reduced image load time by 60%",
-      "Boosted engagement by 25%",
+      "Ponad 100 studentów korzysta aktywnie z platformy",
+      "Responsywna aplikacja działa świetnie na każdym urządzeniu",
+      "Stworzona w architekturze full-stack z nowoczesnym backendem",
     ],
-    buttonText: "View Portfolio",
+    buttonText: "Zobacz stronę",
     src: "/Forumtin.png",
   },
   {
@@ -34,14 +34,14 @@ export const projects = [
     src: "/sps.png",
   },
   {
-    meta: "DELTA MARKETING • 2020",
-    title: "Campaign Landing Page",
+    meta: "QuickTest • 2024",
+    title: "Strona internetowa dla studentów",
     items: [
-      "Drove 10k+ sign-ups in one week",
-      "Optimized for SEO — top 3 Google ranking",
-      "A/B tested 12 variations",
+      "Stworzona w architekturze full-stack z nowoczesnym backendem",
+      "Wygodna nauka do egzaminów na każdym urządzeniu",
+      "Intuicyjny interfejs umożliwia szybkie testowanie wiedzy",
     ],
-    buttonText: "See Details",
+    buttonText: "Zobacz stronę",
     src: "/Testownik.png",
   },
 ];
