@@ -2,6 +2,7 @@ import Image from "next/image";
 import LeftSection from "./left_section";
 import RightSection from "./right_section";
 import { Code, Database, Layout, Rocket, Server, Zap } from "lucide-react";
+import { GlowingEffect } from "./glowing-effect";
 
 const AboutUs = () => {
   return (
@@ -23,8 +24,9 @@ const AboutUs = () => {
         {/* Squares and wide rectangle below */}
         <div className="w-full flex  flex-col xl:grid xl:grid-cols-2 gap-2 sm:gap-3 xl:gap-4">
           {/* Top-left square */}
-          <div className="bg-[#1a1a1a] backdrop-blur-sm border border-white/10 hover:border-blue-500 transition-all duration-300 rounded-2xl xl:rounded-tl-2xl flex flex-col overflow-hidden">
-            <div className="px-8 pt-8 sm:px-10 sm:pt-10">
+          <div className="relative border border-white/15 bg-[#1a1a1a]/80 backdrop-blur-sm transition-all duration-300 rounded-2xl xl:rounded-tl-2xl flex flex-col ">
+          <GlowingEffect glow={true} disabled={false} spread={30} />
+            <div className="relative z-10 px-8 pt-8 sm:px-10 sm:pt-10">
               <p className="mt-2 text-2xl  font-semibold  tracking-tight  bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent max-lg:text-center">
                 Wydajność
               </p>
@@ -36,7 +38,7 @@ const AboutUs = () => {
             <div className="flex flex-1 items-center justify-center px-8 pt-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
               <Image
                 className="w-full max-w-[330px]"
-                src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-performance.png"
+                src="/colored-logo.png"
                 alt="Performance illustration"
                 width={400}
                 height={250}
@@ -47,8 +49,9 @@ const AboutUs = () => {
           </div>
 
           {/* Top-right card with code preview */}
-          <div className="bg-[#1a1a1a] backdrop-blur-sm border border-white/10 hover:border-blue-500 transition-all duration-300 rounded-2xl xl:rounded-tr-2xl overflow-hidden flex flex-col">
-            <div className="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+          <div className="relative border  border-white/15 bg-[#1a1a1a]/80 backdrop-blur-sm transition-all duration-300 rounded-2xl xl:rounded-tr-2xl  flex flex-col">
+          <GlowingEffect glow={true} disabled={false} spread={30} />
+            <div className="relative z-10 px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
               <p className="mt-2 text-2xl font-semibold  tracking-tight  bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent  max-lg:text-center">
                 Kod i Jakość
               </p>
@@ -57,7 +60,7 @@ const AboutUs = () => {
                 ściśle do potrzeb Twojego biznesu.
               </p>
             </div>
-            <div className="relative min-h-[15rem] w-full grow">
+            <div className="relative min-h-[15rem] w-full grow overflow-hidden rounded-2xl xl:rounded-bl-2xl xl:rounded-br-2xl">
               <div className="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
                 <div className="flex bg-gray-800/40 ring-1 ring-white/5">
                   <div className="-mb-px flex text-sm/6 font-medium text-gray-400">
@@ -91,10 +94,11 @@ const AboutUs = () => {
 
           {/* Bottom-wide rectangle spanning two columns */}
 
-          <div className="col-span-2">
-            <div className=" bg-[#1a1a1a] backdrop-blur-sm border border-white/10 hover:border-blue-500 transition-all duration-300 p-3 sm:p-4 xl:p-6 w-full flex flex-col rounded-2xl xl:rounded-bl-2xl xl:rounded-br-2xl">
+          <div className="relative col-span-2 border border-white/20 rounded-2xl xl:rounded-bl-2xl xl:rounded-br-2xl">
+            <GlowingEffect glow className="rounded-2xl xl:rounded-bl-2xl xl:rounded-br-2xl z-10" disabled={false} borderWidth={2} spread={30} />
+            <div className="relative z-10 bg-[#1a1a1a]  backdrop-blur-sm transition-all duration-300 p-3 sm:p-4 xl:p-6 w-full flex flex-col rounded-2xl xl:rounded-bl-2xl xl:rounded-br-2xl">
               <div className="ml-2">
-                <p className="mt-2 font-semibold text-2xl tracking-tight  bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent  max-lg:text-center">
+                <p className="mt-2 font-semibold text-2xl  border-white/15 tracking-tight  bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent  max-lg:text-center">
                   Nasz Tech Stack
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-white max-lg:text-center mb-6">
@@ -137,7 +141,7 @@ const AboutUs = () => {
                 ].map((tech, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center text-center gap-1 bg-gradient-to-br from-gray-800 to-gray-900 p-3  hover:from-gray-700 hover:to-gray-800 transition-all duration-300"
+                    className="flex flex-col items-center text-center gap-1 bg-gradient-to-br from-gray-800 to-gray-700 p-3 hover:from-gray-700 hover:to-gray-600 transition-all duration-300"
                   >
                     {tech.icon}
                     <h4 className="font-medium text-white text-sm sm:text-base">

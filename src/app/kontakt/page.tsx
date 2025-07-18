@@ -14,7 +14,7 @@ import { Send, Mail, Phone, ArrowRight, CheckCircle } from "lucide-react";
 import HeaderKontakt from "../components/header_kontakt";
 import Link from "next/link";
 import BottomBackdropText from "../components/footer";
-import { useCursorLight } from "../hooks/useCursorLight";
+
 import { GlowingEffect } from "../components/glowing-effect";
 const price_options = [
   { id: 1, name: "1 500 - 3 000 zł" },
@@ -33,8 +33,6 @@ const project_options = [
 ];
 
 const Page = () => {
-  const { ref, style } = useCursorLight();
-
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -509,6 +507,7 @@ const Page = () => {
                 </Link>
               </div>
             </motion.div>
+
             <div className="hidden lg:block">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
