@@ -2,7 +2,7 @@ import React from "react";
 import RightSection from "./right_section";
 import LeftSection from "./left_section";
 
-const gapfaq = () => {
+const Gapfaq = () => {
   return (
     <>
       <LeftSection />
@@ -12,4 +12,4 @@ const gapfaq = () => {
   );
 };
 
-export default gapfaq;
+export default Gapfaq;

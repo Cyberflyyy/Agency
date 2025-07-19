@@ -41,7 +41,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="border-b border-r border-white/15 h-16 flex items-center justify-center"></div>
+      <div className="border-b-2 border-r-2 border-white/15 h-16 flex items-center justify-center "></div>
       <div className="h-16  border-white/15 flex items-center justify-center sticky top-0 z-50   ">
         {windowWidth < 640 ? (
           <div className="flex justify-center items-center w-full px-4 ">
@@ -211,7 +211,7 @@ const Header = () => {
                 <Link
                   href="/kontakt"
                   scroll={true}
-                  className="flex items-center justify-center gap-2 w-full py-1.5  px-4 bg-gradient-to-r hover:scale-105    active:scale-95 from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/20"
+                  className="flex items-center text-sm justify-center gap-2 w-full py-1.5  px-4 bg-gradient-to-r hover:scale-105    active:scale-95 from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white rounded-lg transition-all duration-300 shadow-lg shadow-blue-500/20"
                   onClick={() => setMenuOpen(false)}
                 >
                   <Mail size={16} />
@@ -223,7 +223,7 @@ const Header = () => {
         )}
       </div>
 
-      <div className="border-b border-l border-white/15 h-16"></div>
+      <div className="border-b-2 border-l-2 border-white/15 h-16"></div>
     </>
   );
 };

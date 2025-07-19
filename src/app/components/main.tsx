@@ -10,8 +10,8 @@ const Main = () => {
   const { windowWidth } = useWindowWidth();
   return (
     <>
-      <div className="border-b border-r border-white/15 min-h-[450px] md:min-h-[650px]"></div>
-      <div className=" -mt-[1px]   border-t pb-24 border-white/15 min-h-[490px] pt-10 md:pt-0 md:min-h-[600px]  relative overflow-hidden flex items-center justify-center ">
+      <div className="border-b  border-r-2 border-white/15 min-h-[450px] md:min-h-[650px]"></div>
+      <div className=" -mt-[2px]   border-t-2 pb-24 border-white/15 min-h-[490px] pt-10 md:pt-0 md:min-h-[600px]  relative overflow-hidden flex items-center justify-center ">
         <div
           className="absolute inset-0 opacity-30"
           style={{
@@ -60,9 +60,9 @@ const Main = () => {
                 }}
                 className="group flex items-center gap-2 py-2 border border-white/15 sm:py-3 px-4 sm:px-6 text-xs sm:text-sm tracking-wide transition-all rounded-md"
                 onClick={() => {
-                  const el = document.getElementById('realizacje');
+                  const el = document.getElementById("realizacje");
                   if (el) {
-                    el.scrollIntoView({ behavior: 'smooth' });
+                    el.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
               >
@@ -86,7 +86,7 @@ const Main = () => {
         </div>
         {windowWidth < 1250 ? <></> : <BackgroundBeams />}
       </div>
-      <div className="border-b border-l border-white/15 min-h-[450px] md:min-h-[600px] flex items-center pl-4">
+      <div className="border-b border-l-2 border-white/15 min-h-[450px] md:min-h-[600px] flex items-center pl-4">
         <span className="text-white/50 text-xs sm:text-sm"></span>
       </div>
     </>
