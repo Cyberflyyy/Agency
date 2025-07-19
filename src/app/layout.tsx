@@ -22,6 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="NXYR3W99-SBOJqdZS7v3BBuN7eCpHi67dKTtg3W4WZk"
+        />{" "}
+      </head>
+
       <body className={` ${figtree.className} antialiased relative`}>
         <AppProviders>{children}</AppProviders>
         {/* <SmoothScroll /> */}
