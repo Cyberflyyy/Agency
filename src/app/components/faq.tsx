@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import LeftSection from "./left_section";
-import RightSection from "./right_section";
+
 interface FAQ {
   id: number;
   question: string;
@@ -75,7 +74,7 @@ const Rename1 = () => {
     <>
       {windowWidth < 900 ? (
         <>
-          <LeftSection></LeftSection>
+          <div className="   border-r-2    border-white/15"></div>
           <section
             id="faq"
             className="coll-span-3 border-b border-white/15 min-h-[1000px]  flex flex-col items-center justify-center "
@@ -118,7 +117,7 @@ const Rename1 = () => {
               </div>
             </div>
           </section>
-          <RightSection></RightSection>
+          <div className="   border-l-2    border-white/15"></div>
         </>
       ) : (
         <div className="col-span-3">
