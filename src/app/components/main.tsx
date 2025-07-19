@@ -59,22 +59,28 @@ const Main = () => {
                   backgroundColor: "rgba(59, 130, 246, 0.1)",
                 }}
                 className="group flex items-center gap-2 py-2 border border-white/15 sm:py-3 px-4 sm:px-6 text-xs sm:text-sm tracking-wide transition-all rounded-md"
+                onClick={() => {
+                  const el = document.getElementById('realizacje');
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 ZOBACZ PROJEKTY
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </motion.button>
-              {
-                <motion.button
-                  whileHover={{
-                    y: -5,
-                    backgroundColor: "rgba(255, 255, 255, 0.05)",
-                  }}
-                  className="group flex items-center gap-2 border border-white/15 py-2 sm:py-3 px-4 sm:px-6 text-xs sm:text-sm tracking-wide transition-all rounded-md "
-                >
+              <motion.div
+                whileHover={{
+                  y: -5,
+                  backgroundColor: "rgba(255, 255, 255, 0.05)",
+                }}
+                className="group flex items-center gap-2 border border-white/15 py-2 sm:py-3 px-4 sm:px-6 text-xs sm:text-sm tracking-wide transition-all rounded-md "
+              >
+                <a href="/kontakt" className="flex items-center gap-2">
                   KONTAKT
                   <ExternalLink className="w-4 h-4 group-hover:translate-y-[-2px] transition-transform" />
-                </motion.button>
-              }
+                </a>
+              </motion.div>
             </div>
           </motion.div>
         </div>

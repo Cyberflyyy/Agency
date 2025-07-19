@@ -10,6 +10,7 @@ import {
   type CSSProperties,
   type RefObject,
 } from "react";
+import { useWindowWidth } from "./window-width-provider";
 
 interface CursorLightContextType {
   ref: RefObject<HTMLDivElement>;
@@ -21,8 +22,10 @@ const CursorLightContext = createContext<CursorLightContextType | null>(null);
 export function CursorLightProvider({ children }: { children: ReactNode }) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [maskPos, setMaskPos] = useState({ x: "50%", y: "50%" });
+  const { windowWidth } = useWindowWidth();
 
   useEffect(() => {
+    if (windowWidth <= 768) return; // Wyłącz efekt na mobile/tablet
     const el = ref.current;
     if (!el) return;
 
@@ -50,9 +53,9 @@ export function CursorLightProvider({ children }: { children: ReactNode }) {
       el.removeEventListener("mousemove", handleMouse);
       el.removeEventListener("touchmove", handleTouch);
     };
-  }, []);
+  }, [windowWidth]);
 
-  const style: CSSProperties = {
+  const style: CSSProperties = windowWidth <= 768 ? {} : {
     backgroundImage: `radial-gradient(circle at ${maskPos.x} ${maskPos.y}, rgba(255,255,255,0.8) 0%, transparent 40%)`,
     WebkitBackgroundClip: "text",
     backgroundClip: "text",

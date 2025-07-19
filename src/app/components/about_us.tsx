@@ -10,7 +10,7 @@ const AboutUs = () => {
       <LeftSection />
       <div
         id="onas"
-        className="border border-white/15 min-h-[500px] flex flex-col items-center justify-center px-8 sm:px-6 xl:px-8 py-[150px]"
+        className="border border-white/15 min-h-[500px] flex flex-col items-center justify-center px-4 sm:px-6 xl:px-8 py-[150px]"
       >
         {/* Heading section - improved styling */}
         <div className="w-full flex flex-col items-center justify-center mb-6 sm:mb-8 xl:mb-12">
