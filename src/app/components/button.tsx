@@ -1,8 +1,7 @@
 // components/Button.tsx
 "use client";
 import { useRouter } from "next/navigation";
-import LeftSection from "./left_section";
-import RightSection from "./right_section";
+
 import { motion } from "framer-motion";
 import { ArrowRight, Mail, MessageSquare } from "lucide-react";
 import React from "react";
@@ -17,9 +16,9 @@ const Button: React.FC<ButtonProps> = ({ highlightStyle }) => {
 
   return (
     <>
-      <LeftSection />
+      <div className="border-b-2 border-t  border-r-2    border-white/15"></div>
 
-      <div className="border border-white/15 overflow-hidden flex flex-col items-center justify-center py-20 md:py-28 relative">
+      <div className="border border-b-2 border-white/15 overflow-hidden flex flex-col items-center justify-center py-20 md:py-28 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +78,7 @@ const Button: React.FC<ButtonProps> = ({ highlightStyle }) => {
         </div>
       </div>
 
-      <RightSection />
+      <div className="border-b-2 border-t  border-l-2 border-white/15  "></div>
     </>
   );
 };

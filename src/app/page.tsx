@@ -10,6 +10,7 @@ import Stats from "./components/stats";
 import Gap from "./components/gap";
 import EnhancedButton from "./components/enhanced-button";
 import Gapfaq from "./components/gap-faq";
+import Bbgap from "./components/bbgap";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
         <RightSection />
         <Gap />
         <AboutUs />
-        <Gap />
+        <Bbgap />
         <Reneame1 />
         <Gapfaq />
         <EnhancedButton />

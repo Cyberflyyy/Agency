@@ -9,17 +9,17 @@ const Stats = () => {
     {
       value: "50+",
       label: "Zrealizowanych projektów",
-      color: "from-blue-400 to-blue-500",
+      color: "from-blue-400 to-blue-600",
     },
     {
       value: "100%",
       label: "Satysfakcja klientów",
-      color: "from-blue-500 to-indigo-500",
+      color: "from-blue-400 to-blue-600",
     },
     {
       value: "67%",
       label: "Poprawa wydajności",
-      color: "from-indigo-500 to-blue-400",
+      color: "from-blue-400 to-blue-600",
     },
   ];
 
@@ -27,7 +27,7 @@ const Stats = () => {
     <>
       <LeftSection />
 
-      <section className="py-16 md:py-24  relative overflow-hidden">
+      <section className="py-16 md:py-24  relative overflow-hidden -mb-[0.5px]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 justify-items-center gap-8 min-[1441px]:grid-cols-3 min-[1441px]:justify-items-start">
             {stats.map((stat, idx) => {

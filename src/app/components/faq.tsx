@@ -89,7 +89,7 @@ const Rename1 = () => {
                 {localFAQs.slice(0, 3).map((item) => (
                   <article
                     key={item.id}
-                    className={` flex flex-col p-4 xl:pr-8  items-start xl:pl-28 justify-center  border-b border-t border-r flex-1 border-white/15 `}
+                    className={` flex flex-col p-4 xl:pr-8  items-start xl:pl-28 justify-center  border-b border-t-2 border-r flex-1 border-white/15 `}
                   >
                     <h3 className="text-xl xl:text-2xl font-semibold bg-gradient-to-r from-blue-400 to-blue-500  bg-clip-text text-transparent transition-colors duration-200">
                       {item.question}
@@ -104,7 +104,7 @@ const Rename1 = () => {
                 {localFAQs.slice(3, 6).map((item) => (
                   <article
                     key={item.id}
-                    className={` flex flex-col p-4   xl:pr-8 items-start xl:pl-28 justify-center flex-1 border-t border-b border-white/15  `}
+                    className={` flex flex-col p-4   xl:pr-8 items-start xl:pl-28 justify-center flex-1 border-t-2 border-b border-white/15  `}
                   >
                     <h3 className="text-xl xl:text-2xl  font-semibold bg-gradient-to-r from-blue-400 to-blue-500  bg-clip-text text-transparent transition-colors duration-200">
                       {item.question}
@@ -122,10 +122,9 @@ const Rename1 = () => {
         </>
       ) : (
         <div className="col-span-3">
-          <LeftSection></LeftSection>
           <section
             id="faq"
-            className="coll-span-3  border-white/15 min-h-[1000px]  flex flex-col items-center justify-center "
+            className="coll-span-3   min-h-[1000px]  flex flex-col items-center justify-center "
           >
             <h2 className="text-3xl  md:text-4xl xl:text-5xl mt-8 font-semibold mb-8 text-center">
               <span className="">Często zadawane pytania</span>
@@ -136,7 +135,7 @@ const Rename1 = () => {
                 {localFAQs.slice(0, 3).map((item) => (
                   <article
                     key={item.id}
-                    className={` flex flex-col p-4 xl:pr-8  items-start xl:pl-28 justify-center  border-b border-t border-r flex-1 border-white/15 `}
+                    className={` flex flex-col p-4 xl:pr-8  items-start xl:pl-28 justify-center  border-b border-t-2 border-r-2 flex-1 border-white/15 `}
                   >
                     <h3 className="text-xl xl:text-2xl font-semibold bg-gradient-to-r from-blue-400 to-blue-500  bg-clip-text text-transparent transition-colors duration-200">
                       {item.question}
@@ -151,7 +150,7 @@ const Rename1 = () => {
                 {localFAQs.slice(3, 6).map((item) => (
                   <article
                     key={item.id}
-                    className={` flex flex-col p-4   xl:pr-8 items-start xl:pl-28 justify-center flex-1 border-t border-b border-white/15  `}
+                    className={` flex flex-col p-4   xl:pr-8 items-start xl:pl-28 justify-center flex-1 border-t-2 border-b border-white/15  `}
                   >
                     <h3 className="text-xl xl:text-2xl  font-semibold  bg-gradient-to-r from-blue-400 to-blue-500  bg-clip-text text-transparent  transition-colors duration-200">
                       {item.question}
@@ -165,7 +164,6 @@ const Rename1 = () => {
               </div>
             </div>
           </section>
-          <RightSection></RightSection>
         </div>
       )}
     </>
